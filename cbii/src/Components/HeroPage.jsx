@@ -15,7 +15,7 @@ const HeroPage = () => {
     }, [images.length]);
 
     return (
-        <div className="relative w-screen max-w-[100vw] h-screen max-h-[90vh] overflow-hidden mt-16">
+        <div className="relative w-screen max-w-[98.5vw] h-screen max-h-[90vh] overflow-hidden mt-18">
             {/* Carousel/Slider */}
             <div className="relative w-full h-full">
                 {images.map((image, index) => (

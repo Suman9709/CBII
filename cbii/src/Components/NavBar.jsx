@@ -8,27 +8,71 @@ const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
 
-    const components = [
-        {
-            title: "Alert Dialog",
-            href: "/docs/primitives/alert-dialog",
-            description: "Modal dialog for important alerts",
-        },
-        {
-            title: "Hover Card",
-            href: "/docs/primitives/hover-card",
-            description: "Preview content behind links",
-        },
-        {
-            title: "Progress",
-            href: "/docs/primitives/progress",
-            description: "Task completion indicator",
-        },
-    ];
-
     const toggleMobileDropdown = (label) => {
         setOpenMobileDropdown(openMobileDropdown === label ? null : label);
     };
+
+    // Mobile menu items data
+    const mobileMenuItems = [
+        {
+            label: "Home",
+            href: "/",
+            subItems: []
+        },
+        {
+            label: "About",
+            href: "/about",
+            subItems: [
+                { title: "Mission & Vision", href: "/about/mission" },
+                { title: "Our Team", href: "/about/team" },
+                { title: "Advisory Board", href: "/about/advisory" },
+                { title: "Partnership", href: "/about/partnership" }
+            ]
+        },
+        {
+            label: "Programs",
+            href: "/programs",
+            subItems: [
+                { title: "Incubation Program", href: "/programs/incubation" },
+                { title: "Innovation Challenges", href: "/programs/challenges" },
+                { title: "Mentorship", href: "/programs/mentorship" },
+                { title: "Startup School", href: "/programs/startup-school" }
+            ]
+        },
+        {
+            label: "Startups",
+            href: "/startups",
+            subItems: [
+                { title: "Current Startups", href: "/startups/current" },
+                { title: "Alumni", href: "/startups/alumni" },
+                { title: "Success Stories", href: "/startups/success-stories" }
+            ]
+        },
+        {
+            label: "Resource",
+            href: "/resources",
+            subItems: [
+                { title: "Funding Opportunities", href: "/resources/funding" },
+                { title: "Learning Materials", href: "/resources/learning" },
+                { title: "Tools & Templates", href: "/resources/tools" },
+                { title: "FAQs", href: "/resources/faqs" }
+            ]
+        },
+        {
+            label: "Events",
+            href: "/events",
+            subItems: [
+                { title: "Upcoming Events", href: "/events/upcoming" },
+                { title: "Past Events / Gallery", href: "/events/gallery" },
+                { title: "Webinars & Workshops", href: "/events/webinars" }
+            ]
+        },
+        {
+            label: "Contact",
+            href: "/contact",
+            subItems: []
+        }
+    ];
 
     return (
         <nav className="bg-white shadow-sm w-full fixed top-0 z-50">
@@ -41,73 +85,28 @@ const NavBar = () => {
                     </div>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-8 cursor-pointer ">
-
-                    <Link
-                            to="/docs"
-                            className="relative text-gray-700 hover:text-orange-500 px-3 py-2 text-xl font-medium transition-colors duration-300 group"
-                        >
-                            Home
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                        </Link>
-
-                        {/* <HoverDropdown label="Home"   >
-
-                            <DropdownItem href="/docs" title="Introduction" />
-                            <DropdownItem href="/docs/about" title="About Us" />
-                            <DropdownItem href="/docs/team" title="Team" />
-                            <DropdownItem href="/docs/awards" title="Awards" />
-                            <DropdownItem href="/docs/awards" title="Partnership" />
-
-                        </HoverDropdown> */}
-                        <HoverDropdown label="About"  >
-                            <DropdownItem href="/docs" title="Mission & Vision" />
-                            <DropdownItem href="/docs/about" title="Our Team" />
-                            <DropdownItem href="/docs/awards" title="Advisory Board" />
-                            <DropdownItem href="/docs/awards" title="Partnership" />  
-                        </HoverDropdown>
-
-                        <HoverDropdown label="Programs">
-                            <DropdownItem href="/docs" title="Incubation Program" />
-                            <DropdownItem href="/docs/about" title="Innovation Challenges" />
-                            <DropdownItem href="/docs/awards" title="Mentorship" />
-                            <DropdownItem href="/docs/awards" title="Startup School" />
-                        </HoverDropdown>
-
-                        <HoverDropdown label="Startups">
-                            <DropdownItem href="/docs" title="Current Startups" />
-                            <DropdownItem href="/docs/about" title="Alumni" />
-                            <DropdownItem href="/docs/awards" title="Success Stories" />
-                        </HoverDropdown>
-
-                        <HoverDropdown label="Resource">
-                            <DropdownItem href="/docs" title="Funding Opportunities" />
-                            <DropdownItem href="/docs/about" title="Learning Materials" />
-                            <DropdownItem href="/docs/team" title="Tools & Templates" />
-                            <DropdownItem href="/docs/awards" title="FAQs" />
-
-                        </HoverDropdown>
-
-                        <HoverDropdown label="Events" >
-                            <DropdownItem href="/docs" title="Upcoming Events" />
-                            <DropdownItem href="/docs/about" title="Past Events / Gallery" />
-                            <DropdownItem href="/docs/team" title="Webinars & Workshops" />
-
-                        </HoverDropdown>
-
-                        <Link
-                            to="/docs"
-                            className="relative text-gray-700 hover:text-orange-500 px-3 py-2 text-xl font-medium transition-colors duration-300 group"
-                        >
-                            Contact
-                            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-                        </Link>
-                        <Link
-                            to="/docs"
-
-                        >
-                            <button className="relative bg-orange-500 hover:bg-orange-700 p-1 rounded-lg text-white text-md font-medium transition-colors duration-300 group cursor-pointer"> Apply Now
-                               
+                    <div className="hidden md:flex items-center space-x-8 cursor-pointer">
+                        {mobileMenuItems.map((item) => (
+                            item.subItems.length > 0 ? (
+                                <HoverDropdown key={item.label} label={item.label}>
+                                    {item.subItems.map((subItem) => (
+                                        <DropdownItem key={subItem.title} href={subItem.href} title={subItem.title} />
+                                    ))}
+                                </HoverDropdown>
+                            ) : (
+                                <Link
+                                    key={item.label}
+                                    to={item.href}
+                                    className="relative text-gray-700 hover:text-orange-500 px-3 py-2 text-xl font-medium transition-colors duration-300 group"
+                                >
+                                    {item.label}
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            )
+                        ))}
+                        <Link to="/apply">
+                            <button className="relative bg-orange-500 hover:bg-orange-700 p-1 rounded-lg text-white text-md font-medium transition-colors duration-300 group cursor-pointer">
+                                Apply Now
                             </button>
                         </Link>
                     </div>
@@ -133,35 +132,35 @@ const NavBar = () => {
             {mobileMenuOpen && (
                 <div className="md:hidden bg-white shadow-xl animate-slideDown">
                     <div className="pt-2 pb-4 space-y-1">
-                        <MobileDropdown
-                            label="Getting Started"
-                            isOpen={openMobileDropdown === 'Getting Started'}
-                            onToggle={() => toggleMobileDropdown('Getting Started')}
-                        >
-                            <MobileDropdownItem href="/docs" title="Introduction" />
-                            <MobileDropdownItem href="/docs/installation" title="Installation" />
-                            <MobileDropdownItem href="/docs/typography" title="Typography" />
-                        </MobileDropdown>
-
-                        <MobileDropdown
-                            label="Components"
-                            isOpen={openMobileDropdown === 'Components'}
-                            onToggle={() => toggleMobileDropdown('Components')}
-                        >
-                            {components.map((item) => (
-                                <MobileDropdownItem
-                                    key={item.title}
-                                    href={item.href}
-                                    title={item.title}
-                                />
-                            ))}
-                        </MobileDropdown>
-
+                        {mobileMenuItems.map((item) => (
+                            item.subItems.length > 0 ? (
+                                <MobileDropdown
+                                    key={item.label}
+                                    label={item.label}
+                                    isOpen={openMobileDropdown === item.label}
+                                    onToggle={() => toggleMobileDropdown(item.label)}
+                                >
+                                    {item.subItems.map((subItem) => (
+                                        <MobileDropdownItem key={subItem.title} href={subItem.href} title={subItem.title} />
+                                    ))}
+                                </MobileDropdown>
+                            ) : (
+                                <Link
+                                    key={item.label}
+                                    to={item.href}
+                                    className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-300 border-t border-gray-100"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    {item.label}
+                                </Link>
+                            )
+                        ))}
                         <Link
-                            to="/docs"
-                            className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-300 border-t border-gray-100"
+                            to="/apply"
+                            className="block px-6 py-3 text-base font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-300 border-t border-gray-100 text-center"
+                            onClick={() => setMobileMenuOpen(false)}
                         >
-                            Documentation
+                            Apply Now
                         </Link>
                     </div>
                 </div>
@@ -174,12 +173,12 @@ const NavBar = () => {
 const HoverDropdown = ({ label, children }) => {
     return (
         <div className="relative group">
-            <button className="text-gray-700 hover:text-orange-500  py-2 text-md font-medium flex items-center transition-colors duration-300 cursor-pointer">
+            <button className="text-gray-700 hover:text-orange-500 py-2 text-md font-medium flex items-center transition-colors duration-300 cursor-pointer">
                 {label}
                 <span className="ml-1 text-red-500 transform transition-transform group-hover:rotate-180">▼</span>
             </button>
 
-            <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-black ring-1  ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition duration-300 origin-top">
+            <div className="absolute z-10 mt-2 w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition duration-300 origin-top">
                 <div className="py-1">{children}</div>
             </div>
         </div>
@@ -224,10 +223,10 @@ const MobileDropdownItem = ({ href, title }) => (
     <Link
         to={href}
         className="block px-4 py-2 text-lx text-gray-600 hover:text-orange-500 hover:bg-orange-50 rounded transition-colors duration-300"
+        onClick={(e) => e.stopPropagation()} // Prevent parent dropdown from closing
     >
         {title}
     </Link>
 );
-
 
 export default NavBar;
