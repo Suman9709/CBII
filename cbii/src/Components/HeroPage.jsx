@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import iimg6 from '../Images/Iimg6.webp';
-import iimg3 from '../Images/Iimg3.webp';
-import iimg1 from '../Images/Iimg1.webp';
+import iimg6 from '../Images/iimg6.webp';
+import iimg3 from '../Images/iimg3.webp';
+import iimg1 from '../Images/iimg1.webp';
 
 const HeroPage = () => {
     const images = [iimg6, iimg3, iimg1, iimg1, iimg1, iimg1, iimg1, iimg1];
