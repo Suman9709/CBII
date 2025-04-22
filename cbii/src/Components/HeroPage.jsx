@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import iimg6 from '../Images/Iimg6.webp';
 import iimg3 from '../Images/Iimg3.webp';
 import iimg1 from '../Images/Iimg1.webp';
