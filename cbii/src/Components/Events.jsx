@@ -24,63 +24,67 @@ const Events = () => {
     ];
 
     return (
-        <div className="w-full">
-            {/* Full-width Hero Section */}
-            <div className="relative w-full h-screen max-h-[80vh] overflow-hidden group">
-                <img
-                    src={aboutHero}
-                    alt="About iHUB Shivalik"
-                    className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-1000 ease-out"
-                />
-                <div className="absolute inset-0  flex items-center justify-center transition-all duration-500 group-hover:bg-opacity-50">
-                    <div className="text-center px-4 transform translate-y-0 group-hover:-translate-y-2 transition-transform duration-500">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">About iHUB Shivalik</h1>
-                        <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-md">
-                            Fostering innovation and entrepreneurship through cutting-edge incubation programs
-                        </p>
-                    </div>
+      <div className="min-h-screen">
+            {/* Full-screen hero image */}
+            <div className="relative h-screen max-h-[80vh] w-full overflow-hidden">
+              <img
+                src={aboutHero}
+                alt="About iHUB Shivalik"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0  flex items-center justify-center">
+                <div className="text-center px-4">
+                  <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">About iHUB Shivalik</h1>
+                  <p className="text-xl text-white max-w-3xl mx-auto">
+                    Fostering innovation and entrepreneurship through cutting-edge incubation programs
+                  </p>
                 </div>
+              </div>
             </div>
 
-            {/* Content Container */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            {/* Header Section */}
+            <div className="text-center mb-16 mt-16">
+                <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 transform hover:scale-105 transition-transform duration-300 inline-block">
+                    Start-Up <span className="text-[#841B31]">Activities</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-6">
+                    Innovation and Entrepreneurship at Shivalik College
+                </p>
+                <div className="h-1 w-24 bg-[#841B31] mx-auto rounded-full transform origin-left hover:scale-x-125 transition-transform duration-500"></div>
+            </div>
 
-                {/* Header Section */}
-                <div className="text-center mb-16 mt-16">
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 transform hover:scale-105 transition-transform duration-300 inline-block">
-                        Start-Up <span className="text-[#841B31]">Activities</span>
-                    </h1>
-                    <p className="text-xl text-gray-600 mb-6">
-                        Innovation and Entrepreneurship at Shivalik College
-                    </p>
-                    <div className="h-1 w-24 bg-[#841B31] mx-auto rounded-full transform origin-left hover:scale-x-125 transition-transform duration-500"></div>
-                </div>
+            {/* Activities List */}
+            <div className="space-y-24 px-12 pb-10">
+                {activities.map((activity, index) => (
+                    <div
+                        key={index}
+                        className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 items-center group`}
+                    >
+                        {/* Text Content */}
+                        <div className="md:w-2/3 transition-all duration-500 transform hover:-translate-y-2">
+                            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 relative before:absolute before:-bottom-2 before:left-0 before:w-16 before:h-1 before:bg-[#841B31] before:transition-all before:duration-500 group-hover:before:w-24">
+                                {activity.title}
+                            </h2>
+                            <p className="text-gray-600 leading-relaxed transition-all duration-300 group-hover:text-gray-700">
+                                {activity.desc}
+                            </p>
+                        </div>
 
-                {/* Activities List */}
-                <div className="space-y-24 w-full">
-                    {activities.map((activity, index) => (
-                        <div key={index} className="w-full group">
-                            {/* Full-width Image Banner */}
-                            <div className="w-full h-64 md:h-96 overflow-hidden mb-8 rounded-xl shadow-lg">
+                        {/* Image */}
+                        <div className="md:w-1/3 relative overflow-hidden rounded-xl shadow-xl transition-all duration-500 group-hover:shadow-2xl">
+                            <div className="relative overflow-hidden h-64 w-full">
                                 <img
                                     src={activity.image}
                                     alt={activity.title}
-                                    className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-cover transform transition-all duration-700 group-hover:scale-110"
                                 />
-                            </div>
-                            
-                            {/* Text Content */}
-                            <div className="w-full transition-all duration-500 transform hover:-translate-y-2">
-                                <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4 relative before:absolute before:-bottom-2 before:left-0 before:w-16 before:h-1 before:bg-[#841B31] before:transition-all before:duration-500 group-hover:before:w-24">
-                                    {activity.title}
-                                </h2>
-                                <p className="text-gray-600 leading-relaxed transition-all duration-300 group-hover:text-gray-700">
-                                    {activity.desc}
-                                </p>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                                    <span className="text-white font-medium text-lg">View More →</span>
+                                </div>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     );
