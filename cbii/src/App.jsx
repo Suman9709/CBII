@@ -1,22 +1,77 @@
-import React from 'react'
-import NavBar from './Components/NavBar'
-import HeroPage from './Components/HeroPage'
-import About from './Components/About'
-import Testimonial from './Components/Testimonial'
-import Leadership from './Components/Leadership'
-import Footer from './Components/Footer'
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import NavBar from './Components/NavBar';
+// import Leadership from './Components/Leadership';
+// import Footer from './Components/Footer';
+// import Team from './Components/Team';
+// import MainPage from './Components/MainPage';
+// import AboutPage from './Components/AboutPage'; // Create this new component
+// import ProgramsPage from './Components/ProgramsPage'; // Create this new component
+// import StartupsPage from './Components/StartupsPage'; // Create this new component
+// import ResourcesPage from './Components/ResourcesPage'; // Create this new component
+// import EventsPage from './Components/EventsPage'; // Create this new component
+// import ContactPage from './Components/ContactPage'; // Create this new component
+// import ApplyPage from './Components/ApplyPage'; // Create this new component
+
+// const App = () => {
+//   return (
+//     <Router>
+//       <div>
+//         <NavBar />
+//         <Routes>
+//           <Route path="/" element={<MainPage />} />
+//           <Route path="/about" element={<AboutPage />} />
+//           <Route path="/programs" element={<ProgramsPage />} />
+//           <Route path="/startups" element={<StartupsPage />} />
+//           <Route path="/resources" element={<ResourcesPage />} />
+//           <Route path="/events" element={<EventsPage />} />
+//           <Route path="/contact" element={<ContactPage />} />
+//           <Route path="/apply" element={<ApplyPage />} />
+          
+//           {/* Sub-routes for About section */}
+//           <Route path="/about/mission" element={<AboutPage tab="mission" />} />
+//           <Route path="/about/team" element={<AboutPage tab="team" />} />
+//           <Route path="/about/advisory" element={<AboutPage tab="advisory" />} />
+//           <Route path="/about/partnership" element={<AboutPage tab="partnership" />} />
+          
+//           {/* Add similar sub-routes for other sections as needed */}
+//         </Routes>
+//         <Footer />
+//       </div>
+//     </Router>
+//   );
+// };
+
+// export default App;
+
+
+// App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './Components/NavBar';
+import Footer from './Components/Footer';
+import MainPage from './Components/MainPage';
+import About from './Components/About';
+import MissionVision from './Components/MissionVision';
+import Team from './Components/Team';
+import Events from './Components/Events';
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-      <HeroPage/>
-      <About/>
-      <Testimonial/>
-      <Leadership/>
-      <Footer/>
-    </div>
-  )
-}
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/about" element={<About />}  />
+          <Route path="/about/mission&vision" element={<MissionVision />}  />
+          <Route path="/about/team" element={<Team />}  />
+          <Route path="/events/upcoming" element={<Events />}  />
+        </Routes>
+        <Footer />
+      </div>
+  
+  );
+};
 
-export default App
+export default App;
+
