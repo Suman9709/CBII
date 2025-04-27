@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
+    // Company Details
     startupName: '',
     registeredAddress: '',
+    
+    // Primary Contact Person
     contactPerson: {
       name: '',
       designation: '',
@@ -11,9 +14,29 @@ const RegistrationForm = () => {
       mobile: '',
       address: ''
     },
+    
+    // Legal Status
     legalStatus: '',
     registrationNumber: '',
     registrationDate: '',
+    
+    // Product and Users Details
+    coreOffering: '',
+    endCustomers: '',
+    problemsSolved: '',
+    revenueModel: '',
+    licensingRequired: '',
+    licenseObtained: '',
+    licenseDetails: '',
+    
+    // Documents
+    projectDocument: null,
+    businessPlan: null,
+    
+    // CBI Policy
+    cbiiPolicy: false,
+    
+    // Founders
     founders: [{
       name: '',
       education: '',
@@ -26,10 +49,17 @@ const RegistrationForm = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const handleFileChange = (field) => (e) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: e.target.files[0]
     }));
   };
 
@@ -83,7 +113,7 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    // Add form submission logic here
   };
 
   return (
@@ -271,6 +301,221 @@ const RegistrationForm = () => {
             </div>
           </div>
 
+          {/* Product and Users Details Section */}
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold text-blue-600 mb-6 pb-2 border-b border-gray-200">Product and Users Details</h2>
+            
+            <div className="mb-5">
+              <label htmlFor="coreOffering" className="block text-sm font-medium text-gray-700 mb-1">
+                Core Offering (max 50 words) <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="coreOffering"
+                name="coreOffering"
+                value={formData.coreOffering}
+                onChange={handleChange}
+                rows={3}
+                maxLength={300}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                {formData.coreOffering.length}/300 characters
+              </p>
+            </div>
+            
+            <div className="mb-5">
+              <label htmlFor="endCustomers" className="block text-sm font-medium text-gray-700 mb-1">
+                End Customers <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                id="endCustomers"
+                name="endCustomers"
+                value={formData.endCustomers}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required
+              />
+            </div>
+            
+            <div className="mb-5">
+              <label htmlFor="problemsSolved" className="block text-sm font-medium text-gray-700 mb-1">
+                Problems Being Solved <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="problemsSolved"
+                name="problemsSolved"
+                value={formData.problemsSolved}
+                onChange={handleChange}
+                rows={4}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                placeholder="List each problem on a new line"
+                required
+              />
+            </div>
+            
+            <div className="mb-5">
+              <label htmlFor="revenueModel" className="block text-sm font-medium text-gray-700 mb-1">
+                Revenue Model <span className="text-red-500">*</span>
+              </label>
+              <textarea
+                id="revenueModel"
+                name="revenueModel"
+                value={formData.revenueModel}
+                onChange={handleChange}
+                rows={4}
+                className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                required
+              />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label htmlFor="licensingRequired" className="block text-sm font-medium text-gray-700 mb-1">
+                  Licensing Required? <span className="text-red-500">*</span>
+                </label>
+                <select
+                  id="licensingRequired"
+                  name="licensingRequired"
+                  value={formData.licensingRequired}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  required
+                >
+                  <option value="">Select</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              
+              {formData.licensingRequired === 'Yes' && (
+                <>
+                  <div>
+                    <label htmlFor="licenseObtained" className="block text-sm font-medium text-gray-700 mb-1">
+                      License Obtained? <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id="licenseObtained"
+                      name="licenseObtained"
+                      value={formData.licenseObtained}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option value="">Select</option>
+                      <option value="Yes">Yes</option>
+                      <option value="No">No (in process)</option>
+                    </select>
+                  </div>
+                  {formData.licenseObtained === 'Yes' && (
+                    <div className="col-span-2">
+                      <label htmlFor="licenseDetails" className="block text-sm font-medium text-gray-700 mb-1">
+                        License Details <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        id="licenseDetails"
+                        name="licenseDetails"
+                        value={formData.licenseDetails}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                        required
+                      />
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+
+          {/* Document Uploads Section */}
+          <div className="mb-10">
+            <h2 className="text-xl font-semibold text-blue-600 mb-6 pb-2 border-b border-gray-200">Document Uploads</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label htmlFor="projectDocument" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Document (PDF/DOCX) <span className="text-red-500">*</span>
+                </label>
+                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                  <div className="space-y-1 text-center">
+                    <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                      <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <div className="flex text-sm text-gray-600">
+                      <label htmlFor="projectDocument" className="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                        <span>Upload file</span>
+                        <input id="projectDocument" name="projectDocument" type="file" className="sr-only" onChange={handleFileChange('projectDocument')} accept=".pdf,.doc,.docx" required />
+                      </label>
+                      <p className="pl-1">or drag and drop</p>
+                    </div>
+                    <p className="text-xs text-gray-500">PDF, DOC, or DOCX up to 10MB</p>
+                  </div>
+                </div>
+                {formData.projectDocument && (
+                  <p className="mt-2 text-sm text-gray-600">Selected: {formData.projectDocument.name}</p>
+                )}
+              </div>
+              
+              <div>
+                <label htmlFor="businessPlan" className="block text-sm font-medium text-gray-700 mb-2">
+                  Business Plan (PDF/DOCX) <span className="text-red-500">*</span>
+                </label>
+                <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                  <div className="space-y-1 text-center">
+                    <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                      <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    <div className="flex text-sm text-gray-600">
+                      <label htmlFor="businessPlan" className="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
+                        <span>Upload file</span>
+                        <input id="businessPlan" name="businessPlan" type="file" className="sr-only" onChange={handleFileChange('businessPlan')} accept=".pdf,.doc,.docx" required />
+                      </label>
+                      <p className="pl-1">or drag and drop</p>
+                    </div>
+                    <p className="text-xs text-gray-500">PDF, DOC, or DOCX up to 100MB</p>
+                  </div>
+                </div>
+                {formData.businessPlan && (
+                  <p className="mt-2 text-sm text-gray-600">Selected: {formData.businessPlan.name}</p>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* CBI Policy Section */}
+          <div className="mb-10 p-4 bg-blue-50 rounded-lg">
+            <h2 className="text-xl font-semibold text-blue-600 mb-4">Confidential Business Information Policy</h2>
+            <div className="prose prose-sm text-gray-600 mb-4">
+              <p>All information submitted will be treated as confidential business information (CBI) and protected accordingly:</p>
+              <ul className="list-disc pl-5 mt-2">
+                <li>Used only for evaluation purposes</li>
+                <li>Access limited to authorized personnel</li>
+                <li>Stored securely with encryption</li>
+                <li>Not shared with third parties without consent</li>
+              </ul>
+            </div>
+            <div className="flex items-start">
+              <div className="flex items-center h-5">
+                <input
+                  id="cbiiPolicy"
+                  name="cbiiPolicy"
+                  type="checkbox"
+                  checked={formData.cbiiPolicy}
+                  onChange={handleChange}
+                  className="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-300 rounded"
+                  required
+                />
+              </div>
+              <div className="ml-3 text-sm">
+                <label htmlFor="cbiiPolicy" className="font-medium text-gray-700">
+                  I agree to the CBI Policy <span className="text-red-500">*</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
           {/* Founders Details Section */}
           <div className="mb-10">
             <h2 className="text-xl font-semibold text-blue-600 mb-6 pb-2 border-b border-gray-200">Founders Details</h2>
@@ -285,40 +530,40 @@ const RegistrationForm = () => {
                       className="text-sm text-red-600 hover:text-red-800 font-medium"
                       onClick={() => removeFounder(index)}
                     >
-                      Remove Founder
+                      Remove
                     </button>
                   )}
                 </div>
                 
-                <div className="mb-4">
-                  <label htmlFor={`founderName-${index}`} className="block text-sm font-medium text-gray-700 mb-1">
-                    Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id={`founderName-${index}`}
-                    name="name"
-                    value={founder.name}
-                    onChange={(e) => handleFounderChange(index, e)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <label htmlFor={`founderEducation-${index}`} className="block text-sm font-medium text-gray-700 mb-1">
-                    Educational Qualification <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id={`founderEducation-${index}`}
-                    name="education"
-                    value={founder.education}
-                    onChange={(e) => handleFounderChange(index, e)}
-                    placeholder="Degree, Year, University"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                    required
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label htmlFor={`founderName-${index}`} className="block text-sm font-medium text-gray-700 mb-1">
+                      Name <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id={`founderName-${index}`}
+                      name="name"
+                      value={founder.name}
+                      onChange={(e) => handleFounderChange(index, e)}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor={`founderEducation-${index}`} className="block text-sm font-medium text-gray-700 mb-1">
+                      Education <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id={`founderEducation-${index}`}
+                      name="education"
+                      value={founder.education}
+                      onChange={(e) => handleFounderChange(index, e)}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
                 </div>
                 
                 <div className="mb-4">
@@ -330,7 +575,6 @@ const RegistrationForm = () => {
                     name="workExperience"
                     value={founder.workExperience}
                     onChange={(e) => handleFounderChange(index, e)}
-                    placeholder="Company, No. of Years, Functional Area"
                     rows={3}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     required
@@ -362,7 +606,6 @@ const RegistrationForm = () => {
                     name="contact"
                     value={founder.contact}
                     onChange={(e) => handleFounderChange(index, e)}
-                    placeholder="Phone, Mobile, Email"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                     required
                   />
@@ -413,7 +656,10 @@ const RegistrationForm = () => {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              disabled={!formData.cbiiPolicy}
+              className={`px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+                formData.cbiiPolicy ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'
+              }`}
             >
               Submit Registration
             </button>
