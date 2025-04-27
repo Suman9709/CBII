@@ -55,6 +55,7 @@ import About from './Components/About';
 import MissionVision from './Components/MissionVision';
 import Team from './Components/Team';
 import Events from './Components/Events';
+import RegistrationForm from './Components/RegistrationForm';
 
 const App = () => {
   return (
@@ -66,6 +67,7 @@ const App = () => {
           <Route path="/about/mission&vision" element={<MissionVision />}  />
           <Route path="/about/team" element={<Team />}  />
           <Route path="/events/upcoming" element={<Events />}  />
+          <Route path="/apply" element={<RegistrationForm />}  />
         </Routes>
         <Footer />
       </div>
