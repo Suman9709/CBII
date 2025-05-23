@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import shivaliklogo from '../Images/shivalik-logo.png';
 import nacc from '../Images/nacc-grade.png';
+import cbiiLogo from '../Images/cbiiLogo.jpg'
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,7 +37,6 @@ const NavBar = () => {
                 { title: "Incubation Program", href: "/programs/incubation" },
                 { title: "Innovation Challenges", href: "/programs/challenges" },
                 { title: "Mentorship", href: "/programs/mentorship" },
-                { title: "Startup School", href: "/programs/startup-school" }
             ]
         },
         {
@@ -80,12 +80,15 @@ const NavBar = () => {
                 <div className="flex justify-between h-20 items-center">
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
-                        <img className="h-14 object-contain" src={shivaliklogo} alt="Shivalik Logo" />
-                        <img className="h-12 object-contain" src={nacc} alt="NACC Grade" />
+                        <img className="h-14 object-contain" src={cbiiLogo} alt="Shivalik Logo" />
+                       <div className='flex'>
+                         <img className="h-10 object-contain" src={shivaliklogo} alt="Shivalik Logo" />
+                        <img className="h-6 object-contain" src={nacc} alt="NACC Grade" />
+                       </div>
                     </div>
 
                     {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center space-x-8 cursor-pointer">
+                    <div className="hidden md:flex items-center space-x-8 cursor-pointer text-md">
                         {mobileMenuItems.map((item) => (
                             item.subItems.length > 0 ? (
                                 <HoverDropdown key={item.label} label={item.label}>
@@ -97,15 +100,15 @@ const NavBar = () => {
                                 <Link
                                     key={item.label}
                                     to={item.href}
-                                    className="relative text-gray-700 hover:text-orange-500 px-3 py-2 text-xl font-medium transition-colors duration-300 group"
+                                    className="relative text-gray-700 hover:text-[rgb(118,8,37)] px-3 py-2 text-xl font-medium transition-colors duration-300 group"
                                 >
                                     {item.label}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(118,8,37)] transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
                             )
                         ))}
                         <Link to="/apply">
-                            <button className="relative bg-orange-500 hover:bg-orange-700 p-1 rounded-lg text-white text-md font-medium transition-colors duration-300 group cursor-pointer">
+                            <button className="relative bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] p-1 rounded-lg text-white text-md font-medium transition-colors duration-300 group cursor-pointer">
                                 Apply Now
                             </button>
                         </Link>
@@ -115,7 +118,7 @@ const NavBar = () => {
                     <div className="md:hidden flex items-center">
                         <button
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                            className="text-gray-700 hover:text-orange-500 focus:outline-none transition-colors duration-300 p-2 rounded-md"
+                            className="text-gray-700 hover:text-[rgb(118,8,37)] focus:outline-none transition-colors duration-300 p-2 rounded-md"
                             aria-label="Toggle menu"
                         >
                             {mobileMenuOpen ? (
@@ -148,7 +151,7 @@ const NavBar = () => {
                                 <Link
                                     key={item.label}
                                     to={item.href}
-                                    className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors duration-300 border-t border-gray-100"
+                                    className="block px-6 py-3 text-base font-medium text-gray-700 hover:text-[rgb(118,8,37)] hover:bg-orange-50 transition-colors duration-300 border-t border-gray-100"
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     {item.label}
@@ -157,7 +160,7 @@ const NavBar = () => {
                         ))}
                         <Link
                             to="/apply"
-                            className="block px-6 py-3 text-base font-medium text-white bg-orange-500 hover:bg-orange-600 transition-colors duration-300 border-t border-gray-100 text-center"
+                            className="block px-6 py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 border-t border-gray-100 text-center"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             Apply Now
@@ -173,9 +176,9 @@ const NavBar = () => {
 const HoverDropdown = ({ label, children }) => {
     return (
         <div className="relative group">
-            <button className="text-gray-700 hover:text-orange-500 py-2 text-md font-medium flex items-center transition-colors duration-300 cursor-pointer">
+            <button className="text-gray-700 hover:text-[rgb(118,8,37)] py-2 text-md font-medium flex items-center transition-colors duration-300 cursor-pointer">
                 {label}
-                <span className="ml-1 text-red-500 transform transition-transform group-hover:rotate-180">▼</span>
+                <span className="ml-1 text-[rgb(118,8,37)] transform transition-transform group-hover:rotate-180">▼</span>
             </button>
 
             <div className="absolute z-10  w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition duration-300 origin-top">
@@ -188,7 +191,7 @@ const HoverDropdown = ({ label, children }) => {
 const DropdownItem = ({ href, title, description }) => (
     <Link
         to={href}
-        className="block px-4 py-2 text-sm text-white hover:text-orange-500 hover:bg-orange-50 transition-colors duration-300"
+        className="block px-4 py-2 text-sm text-white hover:text-[rgb(118,8,37)] hover:bg-orange-50 transition-colors duration-300"
     >
         <div className="font-medium">{title}</div>
         {description && <div className="text-xs text-gray-500 mt-1">{description}</div>}
@@ -201,7 +204,7 @@ const MobileDropdown = ({ label, children, isOpen, onToggle }) => {
         <div className="border-b border-gray-100">
             <button
                 onClick={onToggle}
-                className="w-full flex justify-between items-center px-6 py-4 text-base font-medium text-gray-700 hover:text-orange-500 transition-colors duration-300"
+                className="w-full flex justify-between items-center px-6 py-4 text-base font-medium text-gray-700 hover:text-[rgb(118,8,37)] transition-colors duration-300"
             >
                 {label}
                 {isOpen ? (
@@ -222,7 +225,7 @@ const MobileDropdown = ({ label, children, isOpen, onToggle }) => {
 const MobileDropdownItem = ({ href, title }) => (
     <Link
         to={href}
-        className="block px-4 py-2 text-lx text-gray-600 hover:text-orange-500 hover:bg-orange-50 rounded transition-colors duration-300"
+        className="block px-4 py-2 text-lx text-gray-600 hover:text-[rgb(118,8,37)] hover:bg-orange-50 rounded transition-colors duration-300"
         onClick={(e) => e.stopPropagation()} // Prevent parent dropdown from closing
     >
         {title}

@@ -4,6 +4,9 @@ import cbii1 from '../Images/cbii1.webp';
 import clg2 from '../Images/clg2.webp';
 import msme from '../Images/msme.webp';
 import iitr from '../Images/iitr.webp';
+import startuputtrakhand from '../Images/startuputtrakhand.png'
+import ihubdivyasampark from '../Images/ihubdivyasampark.png'
+import awadh from '../Images/awadh.svg'
 
 const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -81,7 +84,7 @@ const About = () => {
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2 flex flex-col">
                         <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex-grow">
                             <p className="text-lg text-gray-700 leading-relaxed mb-2">
-                                Shivalik College has tied up with IIT Roorkee in year 2022, and launched iHUB Shivalik, a Spoke of iHUB DivyaSampark, IIT Roorkee.
+                                Shivalik College has tied up with iHUB DivyaSampark IIT Roorkee in year 2022, and launched iHUB Shivalik, a Spoke of iHUB DivyaSampark, IIT Roorkee.
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed mb-2">
                                 The college is working in mission mode to provide business development assistance, by ensuring the availability of infrastructure, mentorship, and training support and above all, the entrepreneurial culture among the students in the campus.
@@ -134,7 +137,35 @@ const About = () => {
                         <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
                             <div className="flex flex-col md:flex-row h-full">
                                 <div className="md:w-1/3 bg-gray-50 flex items-center justify-center p-6">
-                                    <img src={iitr} alt="IIT Roorkee Logo" className="h-24 object-contain" />
+                                    <img src={startuputtrakhand} alt="startuputtrakhand" className="h-24 object-contain" />
+                                </div>
+                                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">IIT Roorkee Partnership</h3>
+                                    <p className="text-gray-700">
+                                        Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                            <div className="flex flex-col md:flex-row h-full">
+                                <div className="md:w-1/3 bg-gray-50 flex items-center justify-center p-6">
+                                    <img src={ihubdivyasampark} alt="ihubdivyasampark" className="h-24 object-contain" />
+                                </div>
+                                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IITR</h3>
+                                    <p className="text-gray-700">
+                                        Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+                            <div className="flex flex-col md:flex-row h-full">
+                                <div className="md:w-1/3 bg-gray-50 flex items-center justify-center p-6">
+                                    <img src={awadh} alt="IIT Roorkee Logo" className="h-24 object-contain" />
                                 </div>
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">IIT Roorkee Partnership</h3>
@@ -148,11 +179,11 @@ const About = () => {
 
                     <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">
-                            <p className="text-3xl font-bold text-[#841B31]">20+</p>
+                            <p className="text-3xl font-bold text-[#841B31]">10+</p>
                             <p className="text-gray-600">Startups Supported</p>
                         </div>
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">
-                            <p className="text-3xl font-bold text-[#841B31]">50+</p>
+                            <p className="text-3xl font-bold text-[#841B31]">15+</p>
                             <p className="text-gray-600">Mentors</p>
                         </div>
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">

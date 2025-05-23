@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import aboutHero from '../Images/aimg13.webp';
 import Leadership from './Leadership';
+import director from '../Images/director.jpg'
+import ceo from '../Images/ak.jpg'
+import surmadhurpant from '../Images/surmadhurpant.webp'
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -19,21 +22,21 @@ const Team = () => {
             name: 'Prof. (Dr.) Prahlad Singh',
             gender: 'Male',
             designation: 'Chairman',
-            photo: '/images/team/prahlad-singh.jpg' // Replace with actual image path
+            photo: [director]
         },
         {
             id: 2,
             name: 'Mr. Ajay Kumar Verma',
             gender: 'Male',
             designation: 'Associate Dean-CBII & CEO, iHub Shivalik',
-            photo: '/images/team/ajay-verma.jpg'
+            photo: [ceo]
         },
         {
             id: 3,
             name: 'Dr. Surmadhur Pant',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: '/images/team/surmadhur-pant.jpg'
+            photo: [surmadhurpant]
         },
         {
             id: 4,
@@ -49,33 +52,13 @@ const Team = () => {
             designation: 'Mentor and Professional Member',
             photo: '/images/team/ashish-gupta.jpg'
         },
-        {
-            id: 6,
-            name: 'Mr. Kalpeshwar',
-            gender: 'Male',
-            designation: 'Mentor and Professional Member',
-            photo: '/images/team/kalpeshwar.jpg'
-        },
-        {
-            id: 7,
-            name: 'Mr. Sartaj Khan',
-            gender: 'Male',
-            designation: 'Mentor and Professional Member',
-            photo: '/images/team/sartaj-khan.jpg'
-        },
+      
         {
             id: 8,
             name: 'Mr. Yashendra Sharma',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
             photo: '/images/team/yashendra-sharma.jpg'
-        },
-        {
-            id: 9,
-            name: 'Mr. Abhishek Chaukiyal',
-            gender: 'Male',
-            designation: 'Mentor and Professional Member',
-            photo: '/images/team/abhishek-chaukiyal.jpg'
         },
         {
             id: 10,
@@ -151,7 +134,7 @@ const Team = () => {
                     <p className="text-xl text-gray-600">
                         Meet the dedicated team behind iHUB Shivalik, a Spoke of iHUB Divya Sampark, IIT Roorkee
                     </p>
-                    <div className="mt-6 h-1 w-24 bg-blue-600 mx-auto rounded-full"></div>
+                    <div className="mt-6 h-1 w-24 bg-[rgb(118,8,37)] mx-auto rounded-full"></div>
                 </motion.div>
 
                 {/* Team Grid */}
@@ -212,14 +195,14 @@ const Team = () => {
                     <div className="grid md:grid-cols-3 gap-6">
                         {/* Leadership */}
                         <div className="bg-blue-50 p-6 rounded-lg">
-                            <h4 className="text-lg font-semibold text-blue-800 mb-3">Leadership</h4>
+                            <h4 className="text-lg font-semibold text-[rgb(118,8,37)] mb-3">Leadership</h4>
                             <ul className="space-y-2">
                                 <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                                    <span className="w-2 h-2 bg-[rgb(118,8,37)] rounded-full mr-2"></span>
                                     <span>Chairman</span>
                                 </li>
                                 <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
+                                    <span className="w-2 h-2 bg-[rgb(118,8,37)] rounded-full mr-2"></span>
                                     <span>Associate Dean & CEO</span>
                                 </li>
                             </ul>

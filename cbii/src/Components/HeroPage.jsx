@@ -90,7 +90,7 @@ const HeroPage = () => {
                 transition={{ duration: 0.6, ease: 'easeOut' }}
                 viewport={{ once: true }}
             >
-                <div className="bg-red-600 text-white py-2 overflow-hidden">
+                <div className="bg-[rgb(118,8,37)] text-white py-2 overflow-hidden">
                     <div className="animate-marquee whitespace-nowrap text-center text-sm sm:text-base font-semibold">
                         📢 Upcoming Hackathon at iHUB Shivalik | Register Now! 🚀 &nbsp;&nbsp;&nbsp;
                         📢 Internship Opportunities Available – Apply Today! &nbsp;&nbsp;&nbsp;

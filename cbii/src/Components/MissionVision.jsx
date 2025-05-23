@@ -40,13 +40,13 @@ const MissionVision = () => {
         {/* Mission Section */}
         <div>
           <div className="flex items-center mb-8">
-            <div className="w-16 h-1 bg-orange-500 mr-4"></div>
+            <div className="w-16 h-1 bg-[rgb(118,8,37)] mr-4"></div>
             <h2 className="text-3xl font-bold text-gray-800">Our Mission</h2>
           </div>
           <div className="bg-gradient-to-r from-orange-50 to-white p-8 rounded-xl shadow-lg">
             <ul className="space-y-6">
               <li className="flex items-start">
-                <span className="flex-shrink-0 bg-orange-500 text-white rounded-full p-2 mr-4">
+                <span className="flex-shrink-0 bg-[rgb(118,8,37)] text-white rounded-full p-2 mr-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
@@ -56,7 +56,7 @@ const MissionVision = () => {
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 bg-orange-500 text-white rounded-full p-2 mr-4">
+                <span className="flex-shrink-0 bg-[rgb(118,8,37)] text-white rounded-full p-2 mr-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
@@ -66,7 +66,7 @@ const MissionVision = () => {
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 bg-orange-500 text-white rounded-full p-2 mr-4">
+                <span className="flex-shrink-0 bg-[rgb(118,8,37)] text-white rounded-full p-2 mr-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
@@ -76,7 +76,7 @@ const MissionVision = () => {
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="flex-shrink-0 bg-orange-500 text-white rounded-full p-2 mr-4">
+                <span className="flex-shrink-0 bg-[rgb(118,8,37)] text-white rounded-full p-2 mr-4">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                   </svg>
@@ -97,7 +97,7 @@ const MissionVision = () => {
               We foster creative thinking and novel solutions to address real-world challenges.
             </p>
           </div>
-          <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-orange-500">
+          <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-[rgb(118,8,37)]">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Sustainability</h3>
             <p className="text-gray-600">
               Our programs emphasize environmentally and socially responsible business practices.
