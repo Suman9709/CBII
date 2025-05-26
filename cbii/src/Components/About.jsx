@@ -16,7 +16,7 @@ const fadeInUp = {
 
 const About = () => {
     return (
-        <div className="w-full overflow-x-hidden overflow-y-hidden">
+        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans">
             <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-12">
 
                 {/* CBII Section */}
@@ -126,7 +126,7 @@ const About = () => {
                                     <img src={msme} alt="MSME Logo" className="h-24 object-contain" />
                                 </div>
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">MSME Registered</h3>
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">Registered with MSME </h3>
                                     <p className="text-gray-700">
                                         CBII is officially recognized and registered with MSME, Government of India, validating our commitment to fostering entrepreneurship and supporting innovative business ideas with national recognition.
                                     </p>
@@ -140,7 +140,7 @@ const About = () => {
                                     <img src={startuputtrakhand} alt="startuputtrakhand" className="h-24 object-contain" />
                                 </div>
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">IIT Roorkee Partnership</h3>
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">StartUp Uttrakhand</h3>
                                     <p className="text-gray-700">
                                         Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
                                     </p>
@@ -154,7 +154,7 @@ const About = () => {
                                     <img src={ihubdivyasampark} alt="ihubdivyasampark" className="h-24 object-contain" />
                                 </div>
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IITR</h3>
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IIT Roorkee</h3>
                                     <p className="text-gray-700">
                                         Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
                                     </p>
@@ -168,7 +168,7 @@ const About = () => {
                                     <img src={awadh} alt="IIT Roorkee Logo" className="h-24 object-contain" />
                                 </div>
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">IIT Roorkee Partnership</h3>
+                                    <h3 className="text-xl font-bold text-[#841B31] mb-3">iHUB AWaDH IIT Ropar</h3>
                                     <p className="text-gray-700">
                                         Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
                                     </p>

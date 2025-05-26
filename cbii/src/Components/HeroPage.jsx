@@ -54,11 +54,15 @@ const HeroPage = () => {
                 viewport={{ once: true }}
                 variants={fadeInUp}
             >
-                <div className="w-full max-w-4xl mx-auto p-6 bg-red-100/40 rounded-xl">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-center">
+                <div className="w-full max-w-4xl mx-auto p-4 bg-red-100/40 rounded-xl mt-28 font-sans">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-center"
+                      
+                    >
                         iHUB Shivalik / CBII
                     </h1>
-                    <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-100 font-semibold leading-relaxed text-center">
+                    <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-100 font-semibold leading-relaxed text-center"
+                      
+                    >
                         Empowering Innovation Through Resources, Mentorship, and Strategic Networking
                     </p>
                 </div>
