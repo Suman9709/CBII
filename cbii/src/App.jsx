@@ -57,6 +57,11 @@ import Team from './Components/Team';
 import Events from './Components/Events';
 import RegistrationForm from './Components/RegistrationForm';
 import Projects from './Components/Projects';
+import IncubationPrograms from './Components/IncubationPrograms';
+import IncubationRegistrationForm from './Components/IncubationRegistrationForm';
+import IncubationProgramDetails from './Components/IncubationProgramDetails';
+import UpcomingEvents from './Components/UpcomingEvents';
+import StartUpsPage from './Components/StartUpsPage';
 
 const App = () => {
   return (
@@ -69,7 +74,12 @@ const App = () => {
           <Route path="/about/team" element={<Team />}  />
           <Route path="/events/gallery" element={<Events />}  />
           <Route path="/apply" element={<RegistrationForm />}  />
-          <Route path="/startups/current" element={<Projects />}  />
+          <Route path="/project/current" element={<Projects />}  />
+          <Route path="/startups/current" element={<StartUpsPage />}  />
+          <Route path="/programs/incubation" element={<IncubationPrograms />}  />
+          <Route path="/incubationprogramregistration" element={<IncubationRegistrationForm />}  />
+          <Route path="/incubationprogramdetails" element={<IncubationProgramDetails />}  />
+          <Route path="/events/upcoming" element={<UpcomingEvents />}  />
         </Routes>
         <Footer />
       </div>

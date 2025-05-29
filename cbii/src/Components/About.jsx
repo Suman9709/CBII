@@ -2,11 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import cbii1 from '../Images/cbii1.webp';
 import clg2 from '../Images/clg2.webp';
-import msme from '../Images/msme.webp';
-import iitr from '../Images/iitr.webp';
-import startuputtrakhand from '../Images/startuputtrakhand.png'
-import ihubdivyasampark from '../Images/ihubdivyasampark.png'
-import awadh from '../Images/awadh.svg'
+import msme from '../Images/Logo/msme.webp';
+import startuputtrakhand from '../Images/Logo/startuputtrakhand.png'
+import ihubdivyasampark from '../Images/Logo/ihubdivyasampark.png'
+import awadh from '../Images/Logo/awadh.svg'
 
 const fadeInUp = {
     initial: { opacity: 0, y: 50 },

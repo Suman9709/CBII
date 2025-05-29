@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
                 {/* Logo & Description */}
                 <div>
-                    <h3 className="text-2xl font-bold text-blue-500">CBII</h3>
+                    <h3 className="text-2xl font-bold text-[rgb(118,8,37)]">CBII</h3>
                     <p className="text-sm mt-4 leading-relaxed">
                         Center of Business Incubation and Innovations (CBII) at Shivalik College, Dehradun
                         is a recognized initiative fostering entrepreneurship, innovation, and sustainability.

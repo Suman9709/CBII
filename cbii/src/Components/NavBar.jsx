@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
-import shivaliklogo from '../Images/shivalik-logo.png';
-import nacc from '../Images/nacc-grade.png';
-import cbiiLogo from '../Images/cbiiLogo.jpg'
+import shivaliklogo from '../Images/Logo/shivalik-logo.png';
+import nacc from '../Images//Logo/nacc-grade.png';
+import cbiiLogo from '../Images/Logo/cbii_Logo.png'
 
 const NavBar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,7 +27,7 @@ const NavBar = () => {
                 { title: "Mission & Vision", href: "/about/mission&vision" },
                 { title: "Our Team", href: "/about/team" },
                 { title: "Advisory Board", href: "/about/advisory" },
-                { title: "Partnership", href: "/about/partnership" }
+                // { title: "Partnership", href: "/about/partnership" }
             ]
         },
         {
@@ -43,21 +43,22 @@ const NavBar = () => {
             label: "Startups",
             href: "/startups",
             subItems: [
-                { title: "Current Startups", href: "/startups/current" },
+                { title: "Startups", href: "/startups/current" },
+                { title: "Projects", href: "/project/current" },
                 { title: "Alumni", href: "/startups/alumni" },
                 { title: "Success Stories", href: "/startups/success-stories" }
             ]
         },
-        {
-            label: "Resource",
-            href: "/resources",
-            subItems: [
-                { title: "Funding Opportunities", href: "/resources/funding" },
-                { title: "Learning Materials", href: "/resources/learning" },
-                { title: "Tools & Templates", href: "/resources/tools" },
-                { title: "FAQs", href: "/resources/faqs" }
-            ]
-        },
+        // {
+        //     label: "Resource",
+        //     href: "/resources",
+        //     subItems: [
+        //         { title: "Funding Opportunities", href: "/resources/funding" },
+        //         { title: "Learning Materials", href: "/resources/learning" },
+        //         { title: "Tools & Templates", href: "/resources/tools" },
+        //         { title: "FAQs", href: "/resources/faqs" }
+        //     ]
+        // },
         {
             label: "Events",
             href: "/events",
