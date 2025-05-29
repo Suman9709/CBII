@@ -82,10 +82,10 @@ const NavBar = () => {
                     {/* Logo Section */}
                     <div className="flex items-center space-x-2">
                         <img className="h-14 object-contain" src={cbiiLogo} alt="Shivalik Logo" />
-                       <div className='flex'>
-                         <img className="h-10 object-contain" src={shivaliklogo} alt="Shivalik Logo" />
-                        <img className="h-6 object-contain" src={nacc} alt="NACC Grade" />
-                       </div>
+                        <div className='flex'>
+                            <img className="h-10 object-contain" src={shivaliklogo} alt="Shivalik Logo" />
+                            <img className="h-6 object-contain" src={nacc} alt="NACC Grade" />
+                        </div>
                     </div>
 
                     {/* Desktop Menu */}
@@ -109,8 +109,11 @@ const NavBar = () => {
                             )
                         ))}
                         <Link to="/apply">
-                            <button className="relative bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] p-1 rounded-lg text-white text-md font-medium transition-colors duration-300 group cursor-pointer">
-                                Apply Now
+                            <button
+
+                                className="inline-block px-6 py-3 bg-[#841B31] text-white font-semibold rounded-lg hover:bg-[#6d1427] transition duration-300 cursor-pointer"
+                            >
+                                Register Now
                             </button>
                         </Link>
                     </div>

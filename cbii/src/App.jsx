@@ -62,6 +62,7 @@ import IncubationRegistrationForm from './Components/IncubationRegistrationForm'
 import IncubationProgramDetails from './Components/IncubationProgramDetails';
 import UpcomingEvents from './Components/UpcomingEvents';
 import StartUpsPage from './Components/StartUpsPage';
+import UpcomingEventsDetails from './Components/UpcomingEventsDetails';
 
 const App = () => {
   return (
@@ -80,6 +81,7 @@ const App = () => {
           <Route path="/incubationprogramregistration" element={<IncubationRegistrationForm />}  />
           <Route path="/incubationprogramdetails" element={<IncubationProgramDetails />}  />
           <Route path="/events/upcoming" element={<UpcomingEvents />}  />
+          <Route path="/upcomingEventsDetails" element={<UpcomingEventsDetails />}  />
         </Routes>
         <Footer />
       </div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 // Example poster image import (replace with your actual image paths)
 import hackathonPoster from "../Images/hackathon2024.jpg";
+import UpcomingEventsDetails from "./UpcomingEventsDetails";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -248,14 +249,19 @@ const UpcomingEvents = () => {
                                     </ul>
                                 </div>
 
-                                <div className="mt-auto">
+                                <div className="mt-auto flex gap-4">
                                     <Link
                                         to={event.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                      
                                         className="block w-full py-3 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition"
                                     >
                                         Register Now
+                                    </Link>
+                                      <Link
+                                        to={"/upcomingEventsDetails"}
+                                        className="block w-full py-3 text-center bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition"
+                                    >
+                                        Learn more
                                     </Link>
                                 </div>
                             </div>

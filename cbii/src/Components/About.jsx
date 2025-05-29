@@ -155,8 +155,9 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IIT Roorkee</h3>
                                     <p className="text-gray-700">
-                                        Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
+                                        In collaboration with IIT Roorkee’s iHUB DivyaSampark, iHUB Shivalik boosts innovation at Shivalik College through advanced research and expert mentorship.
                                     </p>
+
                                 </div>
                             </div>
                         </div>
