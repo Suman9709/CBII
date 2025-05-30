@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import iimg6 from '../Images/aimg6.webp';
 import iimg3 from '../Images/aimg3.webp';
 import iimg1 from '../Images/aimg1.webp';
+import { Link } from 'react-router-dom';
 
 const HeroPage = () => {
     const images = [iimg6, iimg3, iimg1, iimg1, iimg1, iimg1, iimg1, iimg1];
@@ -91,12 +92,12 @@ const HeroPage = () => {
                 className="absolute bottom-0 left-0 w-full z-40"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
+                transition={{ duration: 1.0, ease: 'easeOut' }}
                 viewport={{ once: true }}
             >
                 <div className="bg-[rgb(118,8,37)] text-white py-2 overflow-hidden">
                     <div className="animate-marquee whitespace-nowrap text-center text-sm sm:text-base font-semibold">
-                        📢 Upcoming Hackathon at iHUB Shivalik | Register Now! 🚀 &nbsp;&nbsp;&nbsp;
+                        📢 Upcoming Ideathon at iHUB Shivalik | <Link to={"/upcomingEventForm"}>Register Now</Link>! 🚀 &nbsp;&nbsp;&nbsp;
                         📢 Internship Opportunities Available – Apply Today! &nbsp;&nbsp;&nbsp;
                         📢 Explore Latest Projects and Startups at iHUB...
                     </div>

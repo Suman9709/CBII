@@ -141,7 +141,7 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">StartUp Uttrakhand</h3>
                                     <p className="text-gray-700">
-                                        Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
+                                        The Uttarakhand Startup Council, Directorate of Industries, Government of Uttarakhand, has recognized CBII in 2023, and sanctioned a financial support of INR 1 Crore to further expand its perspective.
                                     </p>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IIT Roorkee</h3>
                                     <p className="text-gray-700">
-                                        In collaboration with IIT Roorkee’s iHUB DivyaSampark, iHUB Shivalik boosts innovation at Shivalik College through advanced research and expert mentorship.
+                                      iHub DivyaSampark has signed a MoU with Shivalik College of Engineering to launch iHUB Shivalik, backed by a ₹1.15 Cr grant for advanced research and innovation. This initiative fosters cutting-edge projects through expert mentorship and state-of-the-art facilities.
                                     </p>
 
                                 </div>

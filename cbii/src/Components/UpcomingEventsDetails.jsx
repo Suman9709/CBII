@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const UpcomingEventsDetails = () => {
     return (
@@ -11,6 +12,16 @@ const UpcomingEventsDetails = () => {
                     is organizing Ideathon 2025 to foster innovation and entrepreneurship. The event encourages innovators and entrepreneurs
                     to pitch ideas for solving societal problems aligned with the <strong>UN SDGs</strong>.
                 </p>
+
+                <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">Category Details</h2>
+                <ul className="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>
+                        <strong>Category 1 (Institute/Startups):</strong> Open for college students and early-stage or working startups.
+                    </li>
+                    <li>
+                        <strong>Category 2 (Schools):</strong> Open for school students from Grade 9 to 12.
+                    </li>
+                </ul>
 
                 <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">Program Objectives</h2>
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
@@ -37,8 +48,8 @@ const UpcomingEventsDetails = () => {
 
                 <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">Eligibility</h2>
                 <div className="text-gray-700 space-y-2">
-                    <p><strong>Institutes:</strong> Open to students, alumni, faculty from Shivalik and other colleges.</p>
-                    <p><strong>Schools:</strong> Grade 9–12 students can participate.</p>
+                    <p><strong>Institutes & Startups:</strong> Open to students, alumni, faculty from Shivalik and other colleges, as well as early-stage startups.</p>
+                    <p><strong>Schools:</strong> Students from Grade 9–12 are eligible to participate.</p>
                 </div>
 
                 <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">Pitching Guidelines</h2>
@@ -58,14 +69,82 @@ const UpcomingEventsDetails = () => {
                 </ul>
 
                 <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">Incubation Benefits</h2>
-                <p className="text-gray-700 mb-2">Selected teams receive:</p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                    <li>Cash Prizes (Up to ₹25,000 for institutes & ₹15,000 for schools)</li>
-                    <li>Mentorship & Networking Opportunities</li>
-                    <li>Access to Seed Funding (Up to ₹5 Lacs)</li>
-                    <li>Co-working Space & Infrastructure</li>
-                </ul>
 
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    {/* Category 1 Card */}
+                    <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-[#841B31] p-4">
+                            <h3 className="text-xl font-semibold text-white">Institutes / Startups</h3>
+                        </div>
+                        <div className="p-5">
+                            <ul className="space-y-3">
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        1
+                                    </span>
+                                    <span className="text-gray-700">1st Prize: <span className="font-medium">₹25,000</span></span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        2
+                                    </span>
+                                    <span className="text-gray-700">2nd Prize: <span className="font-medium">₹15,000</span></span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        3
+                                    </span>
+                                    <span className="text-gray-700">3rd Prize: <span className="font-medium">₹10,000</span> + Incubation Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span className="text-gray-700">Access to funding opportunities (up to ₹5 Lacs of seed money) & investor networks</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Category 2 Card */}
+                    <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-all duration-300">
+                        <div className="bg-[#841B31] p-4">
+                            <h3 className="text-xl font-semibold text-white">Schools</h3>
+                        </div>
+                        <div className="p-5">
+                            <ul className="space-y-3">
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        1
+                                    </span>
+                                    <span className="text-gray-700">1st Prize: <span className="font-medium">₹15,000</span></span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        2
+                                    </span>
+                                    <span className="text-gray-700">2nd Prize: <span className="font-medium">₹10,000</span></span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        3
+                                    </span>
+                                    <span className="text-gray-700">3rd Prize: <span className="font-medium">₹5,000</span> + Incubation Support</span>
+                                </li>
+                                <li className="flex items-start">
+                                    <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                    </span>
+                                    <span className="text-gray-700">Access to funding opportunities (up to ₹5 Lacs of seed money) & investor networks</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <h2 className="text-2xl font-semibold text-gray-800 mt-10 mb-4">How to Apply</h2>
                 <ul className="list-disc pl-6 text-gray-700 space-y-2">
                     <li>Register via the online form.</li>
@@ -81,14 +160,18 @@ const UpcomingEventsDetails = () => {
                     <li><strong>Mr. Ashish Kumar Gupta</strong> – 9557502208, ashish.gupta@sce.org.in</li>
                 </ul>
 
-                <div className="text-center mt-10 flex gap-4">
-                    <button className="inline-block bg-[#841B31] hover:bg-[#a12a45] text-white font-semibold px-6 py-3 rounded-lg transition">
+                <div className="text-center mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link
+                        to="/upcomingEventForm"
+                        className="inline-block bg-[#841B31] hover:bg-[#a12a45] text-white font-semibold px-6 py-3 rounded-lg transition"
+                    >
                         Register Now
-                    </button>
+                    </Link>
                     <a
-                        href="cbii\public\File\Startup Pitching.docx"
+                        href="/files/Startup Pitching.docx"
                         download
-                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition">
+                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition"
+                    >
                         Download PDF
                     </a>
                 </div>
