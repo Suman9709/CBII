@@ -168,7 +168,7 @@ const UpcomingEventsDetails = () => {
                         Register Now
                     </Link>
                     <a
-                        href="/files/Startup Pitching.docx"
+                        href="cbii\public\Startup Pitching.docx"
                         download
                         className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition"
                     >
