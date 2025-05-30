@@ -86,7 +86,7 @@ const UpcomingEventsDetails = () => {
                         Register Now
                     </button>
                     <a
-                        href="cbii\src\File\Startup Pitching.docx"
+                        href="cbii\public\File\Startup Pitching.docx"
                         download
                         className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition">
                         Download PDF
