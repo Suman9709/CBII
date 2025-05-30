@@ -34,7 +34,8 @@ const UpcomingEventsForm = () => {
             return;
         }
         try {
-            const response = await fetch("http://localhost:5000/add-to-sheet", {
+            // const response = await fetch("http://localhost:5000/add-to-sheet", {
+            const response = await fetch("https://cbii.onrender.com/add-to-sheet", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
