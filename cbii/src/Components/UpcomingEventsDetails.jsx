@@ -168,12 +168,13 @@ const UpcomingEventsDetails = () => {
                         Register Now
                     </Link>
                     <a
-                        href="/Startup Pitching.docx"
+                        href="/StartupPitching.docx"
                         download
                         className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition"
                     >
-                        Download PDF
+                        Download DOCX
                     </a>
+
                 </div>
             </div>
         </div>
