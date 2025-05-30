@@ -1,0 +1,23 @@
+.env
+.node_module
+.credentials# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Credentials file (in case it's still present)
+credentials.json
+.credentials/
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional: ignore compiled files or dist folders
+dist/
+build/

@@ -20,12 +20,42 @@ const UpcomingEventsForm = () => {
         setStep(2);
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Submit logic here
-        console.log("Submitted Data:", formData);
-        alert('Form submitted successfully!');
+
+        const {
+            name, email, contact, gender, city, state, applyForIdeathon,
+            participantAs, teamName, theme, problemStatement, legalIdentity,
+            stage, teamSize, revenue, funding, ip, ipType, ipDetails,
+            interested, participantType
+        } = formData;
+        if (!formData) {
+            alert("All fields are required")
+            return;
+        }
+        try {
+            const response = await fetch("http://localhost:5000/add-to-sheet", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    data: [
+                        name, email, contact, gender, city, state, applyForIdeathon,
+                        participantAs, teamName, theme, problemStatement, legalIdentity,
+                        stage, teamSize, revenue, funding, ip, ipType, ipDetails,
+                        interested, participantType
+                    ],
+                }),
+            });
+
+            console.log(response);
+
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
+
 
     return (
         <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-24 mb-10">
@@ -109,7 +139,7 @@ const UpcomingEventsForm = () => {
                     <>
                         <div>
                             <label className="block font-semibold">Team Name <span className="text-red-500">*</span></label>
-                            <input name="teamname" required onChange={handleChange} className="input" />
+                            <input name="teamName" required onChange={handleChange} className="input" />
                         </div>
                         {/* Participant Type */}
                         <div>
@@ -258,6 +288,7 @@ const UpcomingEventsForm = () => {
                                 )}
                                 {formData.theme === "Creative Use of Technology" && (
                                     <>
+
                                         <option>P1</option>
                                         <option>P2</option>
                                         <option>P3</option>
@@ -280,6 +311,7 @@ const UpcomingEventsForm = () => {
                         <div>
                             <label className="block font-semibold">Legal Identity <span className="text-red-500">*</span></label>
                             <select name="legalIdentity" required onChange={handleChange} className="input">
+                                <option>Select</option>
                                 <option>Sole Proprietorship</option>
                                 <option>LLP</option>
                                 <option>OPC</option>
@@ -293,6 +325,7 @@ const UpcomingEventsForm = () => {
                             <div>
                                 <label className="block font-semibold">Startup Stage <span className="text-red-500">*</span></label>
                                 <select name="stage" required onChange={handleChange} className="input">
+                                    <option>Select</option>
                                     <option>Ideation</option>
                                     <option>PoC</option>
                                     <option>MVP</option>
@@ -303,6 +336,7 @@ const UpcomingEventsForm = () => {
                             <div>
                                 <label className="block font-semibold">Team Size <span className="text-red-500">*</span></label>
                                 <select name="teamSize" required onChange={handleChange} className="input">
+                                    <option>Select</option>
                                     <option>below 2 Members</option>
                                     <option>2 - 5 Members</option>
                                     <option>5 - 10 Members</option>
@@ -313,6 +347,7 @@ const UpcomingEventsForm = () => {
                         <div>
                             <label className="block font-semibold">Revenue Traction <span className="text-red-500">*</span></label>
                             <select name="revenue" required onChange={handleChange} className="input">
+                                <option>Select</option>
                                 <option>Not Generated Yet</option>
                                 <option>2 - 5 Lakhs</option>
                                 <option>5 - 10 Lakhs</option>
@@ -322,6 +357,7 @@ const UpcomingEventsForm = () => {
                         <div>
                             <label className="block font-semibold">Funding Stage <span className="text-red-500">*</span></label>
                             <select name="funding" required onChange={handleChange} className="input">
+                                <option>Select</option>
                                 <option>Bootstrapped</option>
                                 <option>10 - 25 Lakhs</option>
                                 <option>25 - 50 Lakhs</option>
@@ -332,6 +368,7 @@ const UpcomingEventsForm = () => {
                         <div>
                             <label className="block font-semibold">IP Associated? <span className="text-red-500">*</span></label>
                             <select name="ip" required onChange={handleChange} className="input">
+                                <option>Select</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
@@ -341,6 +378,7 @@ const UpcomingEventsForm = () => {
                             <>
                                 <label className="block font-semibold">Type of IP <span className="text-red-500">*</span></label>
                                 <select name="ipType" required onChange={handleChange} className="input">
+                                    <option>Select</option>
                                     <option>Patent - Granted</option>
                                     <option>Patent - Published</option>
                                     <option>Patent - Applied</option>
@@ -357,6 +395,7 @@ const UpcomingEventsForm = () => {
                         <div>
                             <label className="block font-semibold">Interested in Incubation? <span className="text-red-500">*</span></label>
                             <select name="interested" required onChange={handleChange} className="input">
+                                <option>Select</option>
                                 <option>Yes</option>
                                 <option>No</option>
                             </select>
