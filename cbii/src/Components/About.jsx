@@ -102,8 +102,8 @@ const About = () => {
                                 className="absolute h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md hidden lg:block">
-                                <p className="font-bold text-[#841B31]">IIT Roorkee Partner</p>
-                                <p className="text-sm text-gray-600">iHUB DivyaSampark</p>
+                                <p className="font-bold  text-[#841B31]">iHUB DivyaSampark</p>
+                                <p className="text-sm text-gray-600">IIT Roorkee Partner</p>
                             </div>
                         </div>
                     </motion.div>
