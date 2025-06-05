@@ -15,7 +15,7 @@ const fadeInUp = {
 
 const About = () => {
     return (
-        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans">
+        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans" id='about'>
             <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-12">
 
                 {/* CBII Section */}

@@ -58,7 +58,7 @@ const NavBar = () => {
         },
         {
             label: "Contact",
-            href: "/contact",
+            href: "/#footer",
             subItems: []
         }
     ];
