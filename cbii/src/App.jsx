@@ -19,6 +19,7 @@ import UpcomingEventsDetails from './Components/UpcomingEventsDetails';
 import UpcommngEventsForm from './Components/UpcommngEventsForm';
 import ScrolltoTop from './Components/ScrolltoTop';
 import ScrollToHashElement from './Components/ScrollToHashElement';
+import PageNotFound from './Components/PageNotFound';
 
 const App = () => {
   return (
@@ -41,6 +42,12 @@ const App = () => {
         <Route path="/events/upcoming" element={<UpcomingEvents />} />
         <Route path="/upcomingEventsDetails" element={<UpcomingEventsDetails />} />
         <Route path="/upcomingEventForm" element={<UpcommngEventsForm />} />
+        <Route path="/about/advisory" element={<PageNotFound />} />
+        <Route path="/programs/challenges" element={<PageNotFound />} />
+        <Route path="/programs/mentorship" element={<PageNotFound />} />
+        <Route path="/startups/alumni" element={<PageNotFound />} />
+        <Route path="/startups/success-stories" element={<PageNotFound />} />
+        <Route path="/events/webinars" element={<PageNotFound />} />
 
       </Routes>
       <Footer />

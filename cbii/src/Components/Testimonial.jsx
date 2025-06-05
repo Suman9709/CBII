@@ -4,7 +4,7 @@ import { useInView } from 'framer-motion';
 import { motion } from 'framer-motion';
 
 // Import your logo images
-import startup1 from '../Images/Aimg1.png';
+import cyberaltron from '../Images/Logo/cyberaltron.png';
 import startup2 from '../Images/Aimg1.png';
 import startup3 from '../Images/Aimg1.png';
 import startup4 from '../Images/Aimg1.png';
@@ -15,9 +15,9 @@ const Testimonial = () => {
 
   const testimonials = [
     {
-      logo: startup1,
-      quote: "CBII's support was instrumental in our early growth.",
-      name: "TechStart Innovations"
+      logo: cyberaltron,
+      quote: "Cyberultron expresses deep gratitude to Shivalik College of Engineering, especially Mr. Ajay Kumar and Prahlad Sir, for their exceptional support in fostering industry-academia collaboration. Their efforts streamlined the funding process and strengthened future partnership prospects.",
+      name: "Cyberultron Consulting Private Limited"
     },
     {
       logo: startup2,
@@ -42,9 +42,9 @@ const Testimonial = () => {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           What Our <span className="text-[#841B31]">Startups Say</span>
         </h2>
-        
+
         <div className="relative overflow-hidden">
-          <motion.div 
+          <motion.div
             className="flex gap-8"
             animate={isInView ? { x: [0, -200, -400, -600, 0] } : {}}
             transition={{
@@ -61,14 +61,17 @@ const Testimonial = () => {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <img 
-                  src={item.logo} 
-                  alt={item.name} 
+                <img
+                  src={item.logo}
+                  alt={item.name}
                   className="h-16 object-contain mb-4"
                 />
-                <p className="text-gray-700 text-center italic mb-2">"{item.quote}"</p>
-                <p className="text-[#841B31] font-medium">{item.name}</p>
+                <div className="text-gray-700 text-center italic mb-2 overflow-y-auto max-h-24">
+                  "{item.quote}"
+                </div>
+                <p className="text-[#841B31] font-medium text-center">{item.name}</p>
               </motion.div>
+
             ))}
           </motion.div>
         </div>
