@@ -26,7 +26,8 @@ const HeroPage = () => {
     };
 
     return (
-        <div className="relative w-screen max-w-[98.5vw] h-screen max-h-[90vh] overflow-hidden mt-18">
+        <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden mt-18">
+
             {/* Carousel/Slider */}
             <div className="relative w-full h-full">
                 {images.map((image, index) => (
@@ -56,13 +57,13 @@ const HeroPage = () => {
                 variants={fadeInUp}
             >
                 <div className="w-full max-w-4xl mx-auto p-4 bg-red-100/40 rounded-xl mt-28 font-sans">
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white text-center"
-                      
+                    <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white text-center"
+
                     >
                         iHUB Shivalik / CBII
                     </h1>
-                    <p className="text-xl md:text-2xl lg:text-3xl mb-8 text-gray-100 font-semibold leading-relaxed text-center"
-                      
+                    <p className="text-base sm:text-lg md:text-2xl lg:text-3xl mb-6 text-gray-100 font-semibold leading-relaxed text-center"
+
                     >
                         Empowering Innovation Through Resources, Mentorship, and Strategic Networking
                     </p>

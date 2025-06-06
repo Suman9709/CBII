@@ -52,10 +52,11 @@ const About = () => {
                                 alt="CBII at Shivalik College"
                                 className="h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
                             />
-                            <div className="absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
+                            <div className="hidden md:block absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
                                 <p className="font-bold text-[#841B31] text-sm md:text-base">Government Recognized</p>
                                 <p className="text-xs text-gray-600">Uttarakhand Startup Council</p>
                             </div>
+
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
@@ -197,7 +198,7 @@ const About = () => {
                         </div>
                     </div>
                 </motion.div>
-                
+
             </div>
         </div>
     );
