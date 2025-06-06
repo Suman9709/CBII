@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import cbii1 from '../Images/cbii1.webp';
 import clg2 from '../Images/clg2.webp';
+import divyasampark from '../Images/divyasampark.png'
 import msme from '../Images/Logo/msme.webp';
 import startuputtrakhand from '../Images/Logo/startuputtrakhand.png'
 import ihubdivyasampark from '../Images/Logo/ihubdivyasampark.png'
@@ -97,7 +98,7 @@ const About = () => {
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2 relative">
                         <div className="relative h-full" style={{ height: '57.5%', minHeight: '380px' }}>
                             <img
-                                src={clg2}
+                                src={divyasampark}
                                 alt="iHub Shivalik at Shivalik College"
                                 className="absolute h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
                             />
@@ -155,7 +156,7 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">iHub DivyaSampark IIT Roorkee</h3>
                                     <p className="text-gray-700">
-                                      iHub DivyaSampark has signed a MoU with Shivalik College of Engineering to launch iHUB Shivalik, backed by a ₹1.15 Cr grant for advanced research and innovation. This initiative fosters cutting-edge projects through expert mentorship and state-of-the-art facilities.
+                                        iHub DivyaSampark has signed a MoU with Shivalik College of Engineering to launch iHUB Shivalik, backed by a ₹1.15 Cr grant for advanced research and innovation. This initiative fosters cutting-edge projects through expert mentorship and state-of-the-art facilities.
                                     </p>
 
                                 </div>
@@ -196,6 +197,7 @@ const About = () => {
                         </div>
                     </div>
                 </motion.div>
+                
             </div>
         </div>
     );

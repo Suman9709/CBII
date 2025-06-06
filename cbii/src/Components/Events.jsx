@@ -44,7 +44,7 @@ const Events = () => {
   };
 
   return (
-    <div className="w-full mt-16">
+    <div className="w-full mt-18">
       {/* Carousel Section */}
       <div className="relative w-full h-[90vh] overflow-hidden">
         {carouselImages.map((img, idx) => (
