@@ -4,11 +4,13 @@ import About from './About'
 import Testimonial from './Testimonial'
 import ScrolltoTop from './ScrolltoTop'
 import { Link } from 'react-router-dom'
+import PopUpDialog from './PopUpDialog'
 
 const MainPage = () => {
   return (
     <div>
       <ScrolltoTop />
+      <PopUpDialog />
       <HeroPage />
       <About />
       <Testimonial />
