@@ -133,7 +133,7 @@ const UpcomingEvents = () => {
             <img
               src={ideathonEvent.image}
               alt={ideathonEvent.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
               <motion.h1 
@@ -203,7 +203,7 @@ const UpcomingEvents = () => {
                 <img
                   src={ideathonEvent.image}
                   alt={ideathonEvent.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent flex flex-col justify-end p-8">
                   <h3 className="text-3xl font-bold text-white">{ideathonEvent.title}</h3>
