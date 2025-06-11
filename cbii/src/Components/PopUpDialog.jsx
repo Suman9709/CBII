@@ -13,7 +13,7 @@ const PopUpDialog = () => {
         <>
             {showDialogBox && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center ">
-                    <div className="relative  rounded-xl shadow-lg max-w-md w-1/2 h-3/4">
+                    <div className="relative border-2 rounded-xl shadow-lg max-w-md w-1/3 h-3/4">
                         {/* Close button */}
                         <button
                             className="absolute top-2 right-2 text-red-900 hover:text-black text-xl"
@@ -27,7 +27,7 @@ const PopUpDialog = () => {
                             <img
                                 src={hackathon2024}
                                 alt="Popup"
-                                className="w-full h-full object-cover rounded-lg"
+                                className="w-full h-full object-contain rounded-lg"
                             />
                         </Link>
                     </div>
