@@ -172,7 +172,7 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">iHUB AWaDH IIT Ropar</h3>
                                     <p className="text-gray-700">
-                                        Our collaboration with IIT Roorkee through iHUB DivyaSampark brings premier technical expertise and research capabilities to our entrepreneurial ecosystem, elevating the quality of innovation at Shivalik College.
+                                       Shivalik College of Engineering has signed an MoU with iHUB AWaDH, IIT Ropar to foster Innovation by facilitating the establishment of a Skilling, Research, and Innovation Hub through the AWaDH CPS Outreach Centre.
                                     </p>
                                 </div>
                             </div>

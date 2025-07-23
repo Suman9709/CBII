@@ -82,19 +82,19 @@ const UpcomingEventsDetails = () => {
                                     <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
                                         1
                                     </span>
-                                    <span className="text-gray-700">1st Prize: <span className="font-medium">₹25,000</span></span>
+                                    <span className="text-gray-700">1st Prize: <span className="font-medium">₹50,000</span></span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
                                         2
                                     </span>
-                                    <span className="text-gray-700">2nd Prize: <span className="font-medium">₹15,000</span></span>
+                                    <span className="text-gray-700">2nd Prize: <span className="font-medium">₹25,000</span></span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">
                                         3
                                     </span>
-                                    <span className="text-gray-700">3rd Prize: <span className="font-medium">₹10,000</span> + Incubation Support</span>
+                                    <span className="text-gray-700">3rd Prize: <span className="font-medium">₹20,000</span> + Incubation Support</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="flex-shrink-0 w-5 h-5 bg-[#841B31]/10 text-[#841B31] rounded-full flex items-center justify-center mr-3 mt-0.5">

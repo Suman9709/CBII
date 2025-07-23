@@ -158,7 +158,16 @@ const Projects = () => {
                 variants={fadeInUp}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
-                <div className="h-52 bg-cover bg-center" style={{ backgroundImage: `url(${project.image})` }}></div>
+                <div className="h-52 w-full overflow-hidden flex items-center justify-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className=" h-full object-contain  rounded-2xl"
+                  />
+                </div>
+
+
+
                 <div className="p-4">
                   <h4 className="text-xl font-bold mb-3 text-gray-800 line-clamp-1">{project.title}</h4>
                   <p className="text-gray-600 mb-4 line-clamp-2">{project.description}</p>

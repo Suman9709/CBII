@@ -5,6 +5,7 @@ import hackathon from '../Images/Aimg2.png';
 import shivatech from '../Images/Aimg1.png';
 import aboutHero from '../Images/aimg13.webp';
 
+
 const Events = () => {
   const carouselImages = [hackathon, shivatech, aboutHero];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,18 +45,24 @@ const Events = () => {
   };
 
   return (
-    <div className="w-full mt-18">
+    <div className="w-full mt-20">
       {/* Carousel Section */}
-      <div className="relative w-full h-[90vh] overflow-hidden">
-        {carouselImages.map((img, idx) => (
+      <div className="relative w-full h-screen overflow-hidden">
+        {carouselImages.map((image, idx) => (
           <motion.div
             key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              }`}
           >
-            <img src={img} alt="" className="w-full h-full object-cover object-center" />
+            <img
+              src={image}
+              alt=""
+              className="w-full h-full object-cover object-center"
+            />
             <div className="absolute inset-0 bg-black opacity-50" />
           </motion.div>
         ))}
+
 
         {/* Text Overlay */}
         <motion.div
@@ -65,7 +72,7 @@ const Events = () => {
           viewport={{ once: true }}
           variants={fadeInUp}
         >
-          <div className="bg-red-100/30 backdrop-blur-md rounded-xl p-6 md:p-10">
+          <div className="  rounded-xl p-6 md:p-10">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-center">Startup Events</h1>
             <p className="text-xl md:text-2xl font-medium text-gray-100 text-center">
               Empowering Innovation Through Resources, Mentorship, and Strategic Networking

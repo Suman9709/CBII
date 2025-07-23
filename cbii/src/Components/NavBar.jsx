@@ -91,7 +91,7 @@ const NavBar = () => {
                             )
                         ))}
                         <Link to="/apply">
-                            <button className="inline-block px-6 py-3 bg-[#841B31] text-white font-semibold rounded-lg hover:bg-[#6d1427] transition duration-300 cursor-pointer">
+                            <button className="inline-block px-6 py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50 ">
                                 Register Now
                             </button>
                         </Link>
@@ -137,8 +137,8 @@ const NavBar = () => {
                                 )}
                             </div>
                         ))}
-                        <Link to="/apply" className="block px-6 py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 text-center">
-                            Apply Now
+                        <Link to="/apply" className="block px-6 py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 text-center ">
+                            Register Now
                         </Link>
                     </div>
                 </div>

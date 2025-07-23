@@ -5,6 +5,7 @@ import Leadership from './Leadership';
 import director from '../Images/director.jpg'
 import ceo from '../Images/ak.jpg'
 import surmadhurpant from '../Images/surmadhurpant.webp'
+import yashendra from "../Images/yashendra.png"
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -58,7 +59,7 @@ const Team = () => {
             name: 'Mr. Yashendra Sharma',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: '/images/team/yashendra-sharma.jpg'
+            photo: [yashendra]
         },
         {
             id: 10,

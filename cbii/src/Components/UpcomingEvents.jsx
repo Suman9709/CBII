@@ -52,10 +52,10 @@ const UpcomingEvents = () => {
       {
         name: "Institute / Startups",
         eligibility: [
-          "Open for college students and working startups",
+          "Open for students, alumini and faculty member of Shivalik College of Engineering/College of Pharmacy working" ,
         ],
         incubationBenefits: [
-          "Cash Prize: 1st - ₹25,000, 2nd - ₹15,000, 3rd - ₹10,000 + incubation support",
+          "Cash Prize: 1st - ₹50,000, 2nd - ₹25,000, 3rd - ₹20,000 + incubation support",
           "Access to funding opportunities (up to ₹5 Lacs of seed money) & investor networks",
         ],
       },
