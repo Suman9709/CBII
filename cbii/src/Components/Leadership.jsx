@@ -33,7 +33,7 @@ const Leadership = () => {
               {/* Biography Section */}
               <div className="mb-8">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Mr. Ajay Kumar Verma is a trailblazer in fostering innovation, entrepreneurship, and industry-academia collaboration. As the Associate Dean at the Center of Business Incubation and Innovations (CBII), he plays a pivotal role in shaping the future of technology-driven enterprises at Shivalik Campus.
+                  Mr. Ajay Kumar Verma is a trailblazer in fostering innovation, entrepreneurship, and industry-academia collaboration. As the CEO at the Center of Business Incubation and Innovations (CBII), he plays a pivotal role in shaping the future of technology-driven enterprises at Shivalik Campus.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   As the founding CEO of iHUB Shivalik, a spoke of iHUB Divya Sampark, IIT Roorkee, Mr. Verma has been instrumental in building an entrepreneurial ecosystem that bridges academia with cutting-edge technological advancements. His leadership extends to spearheading the Institution's Innovation Council (IIC) as its President, an initiative recognized by the Ministry of Education, Government of India. Through team efforts, he has successfully organized numerous government-sponsored programs aimed at nurturing student and faculty entrepreneurship.
