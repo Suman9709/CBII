@@ -26,7 +26,7 @@ const HeroPage = () => {
     };
 
     return (
-        <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden mt-18">
+        <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
 
             {/* Carousel/Slider */}
             <div className="relative w-full h-full">
@@ -49,7 +49,7 @@ const HeroPage = () => {
             <div className="absolute inset-0 z-20"></div>
 
             {/* Hero Text Content */}
-            <motion.div
+            {/* <motion.div
                 className="absolute inset-0 z-30 flex items-center justify-center px-4"
                 initial="hidden"
                 whileInView="visible"
@@ -68,7 +68,7 @@ const HeroPage = () => {
                         Empowering Innovation Through Resources, Mentorship, and Strategic Networking
                     </p>
                 </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Navigation Dots */}
             <motion.div

@@ -15,7 +15,7 @@ const MainPage = () => {
       <About />
       <Testimonial />
 
-      <div className="bg-[#841B31] text-white py-6 px-3 sm:px-4 md:px-8 text-center rounded-t-xl shadow-2xl mt-12 relative overflow-hidden">
+      <div className="bg-[#841B31] text-white py-6 px-3 sm:px-4 md:px-8 text-center rounded-t-xl shadow-2xl relative overflow-hidden">
         <div className="absolute -top-4 -left-4 text-5xl sm:text-6xl opacity-10 rotate-12">💡</div>
         <div className="absolute -bottom-4 -right-4 text-5xl sm:text-6xl opacity-10 -rotate-12">🚀</div>
 

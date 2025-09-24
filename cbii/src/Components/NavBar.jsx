@@ -24,8 +24,9 @@ const NavBar = () => {
             href: "/mission",
             subItems: [
                 { title: "Mission & Vision", href: "/about/mission&vision" },
+                { title: "Chairman’s Note", href: "/about/managements" },
                 { title: "Our Team", href: "/about/team" },
-                { title: "Advisory Board", href: "/about/advisory" }
+                { title: "Expert Mentors", href: "/about/expertmentor" }
             ]
         },
         {

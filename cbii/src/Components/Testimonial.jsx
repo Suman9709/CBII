@@ -1,9 +1,6 @@
-import React from 'react';
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-import { motion } from 'framer-motion';
+import React, { useEffect, useRef, useState } from 'react';
+import { useInView, motion, useAnimation } from 'framer-motion';
 
-// Import your logo images
 import cyberaltron from '../Images/Logo/cyberaltron.png';
 import startup2 from '../Images/Aimg1.png';
 import startup3 from '../Images/Aimg1.png';
@@ -13,28 +10,47 @@ const Testimonial = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
+  const controls = useAnimation();
+  const [isPaused, setIsPaused] = useState(false);
+
   const testimonials = [
     {
       logo: cyberaltron,
-      quote: "Cyberultron expresses deep gratitude to Shivalik College of Engineering, especially Mr. Ajay Kumar and Prahlad Sir, for their exceptional support in fostering industry-academia collaboration. Their efforts streamlined the funding process and strengthened future partnership prospects.",
-      name: "Cyberultron Consulting Private Limited"
+      quote:
+        "Cyberultron expresses deep gratitude to Shivalik College of Engineering, especially Mr. Ajay Kumar and Prahlad Sir, for their exceptional support in fostering industry-academia collaboration. Their efforts streamlined the funding process and strengthened future partnership prospects.",
+      name: "Cyberultron Consulting Private Limited",
     },
     {
       logo: startup2,
       quote: "The mentorship we received transformed our business model.",
-      name: "EcoSolutions Ltd"
+      name: "EcoSolutions Ltd",
     },
     {
       logo: startup3,
       quote: "Access to iHUB's network opened doors we couldn't have imagined.",
-      name: "HealthTrack Systems"
+      name: "HealthTrack Systems",
     },
     {
       logo: startup4,
       quote: "The funding and guidance helped us scale rapidly.",
-      name: "EduFuture Academy"
-    }
+      name: "EduFuture Academy",
+    },
   ];
+
+  useEffect(() => {
+    if (isInView && !isPaused) {
+      controls.start({
+        x: [0, -200, -400, -600, 0],
+        transition: {
+          duration: 20,
+          ease: "linear",
+          repeat: Infinity,
+        },
+      });
+    } else {
+      controls.stop();
+    }
+  }, [isInView, isPaused, controls]);
 
   return (
     <section ref={ref} className="py-12 bg-gray-50 mt-16">
@@ -46,20 +62,17 @@ const Testimonial = () => {
         <div className="relative overflow-hidden">
           <motion.div
             className="flex gap-8"
-            animate={isInView ? { x: [0, -200, -400, -600, 0] } : {}}
-            transition={{
-              duration: 20,
-              ease: "linear",
-              repeat: Infinity,
-            }}
+            animate={controls}
           >
             {[...testimonials, ...testimonials].map((item, index) => (
               <motion.div
                 key={index}
-                className="flex-shrink-0 w-64 h-72 bg-white p-6 rounded-xl shadow-md flex flex-col items-center"
+                className="flex-shrink-0 w-64 h-72 bg-white p-6 rounded-xl shadow-md flex flex-col items-center cursor-pointer"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
               >
                 <img
                   src={item.logo}
@@ -69,9 +82,10 @@ const Testimonial = () => {
                 <div className="text-gray-700 text-center italic mb-2 overflow-y-auto max-h-24">
                   "{item.quote}"
                 </div>
-                <p className="text-[#841B31] font-medium text-center">{item.name}</p>
+                <p className="text-[#841B31] font-medium text-center">
+                  {item.name}
+                </p>
               </motion.div>
-
             ))}
           </motion.div>
         </div>
@@ -79,6 +93,5 @@ const Testimonial = () => {
     </section>
   );
 };
-export default Testimonial
 
-// Add this component to your About component before the closing </div>
+export default Testimonial;

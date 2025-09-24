@@ -16,8 +16,8 @@ const fadeInUp = {
 
 const About = () => {
     return (
-        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans" id='about'>
-            <div className="max-w-7xl mx-auto px-4 sm:px-4 lg:px-8 py-12">
+        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans px-4" id='about'>
+            <div className="max-w-7xl">
 
                 {/* CBII Section */}
                 <motion.div {...fadeInUp} viewport={{ once: true }} className="text-center mb-8">
@@ -34,7 +34,7 @@ const About = () => {
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2">
                         <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                                Shivalik College, Dehradun proudly launched the Center of Business Incubation and Innovations (CBII) in 2022, a pioneering initiative to nurture aspiring entrepreneurs. It is recognized and registered with MSME, Government of India.
+                                Shivalik College, Dehradun under Rijan Educational Society  proudly launched the Center of Business Incubation and Innovations (CBII) in 2022, a pioneering initiative to nurture aspiring entrepreneurs. It is recognized and registered with MSME, Government of India.
                             </p>
                             <p className="text-lg text-gray-700 leading-relaxed mb-4">
                                 The CBII is running with a vision to cultivate an environment conducive to young entrepreneurs, emphasizing innovation, sustainability, and social relevance. It is designed to support the creation, incubation, and successful operation of innovative businesses that prioritize societal and environmental impact.
@@ -46,17 +46,17 @@ const About = () => {
                     </motion.div>
 
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2 flex flex-col gap-16">
-                        <div className="relative" style={{ height: '57.5%', minHeight: '320px' }}>
+                        <div className="relative w-full">
                             <img
                                 src={cbii1}
                                 alt="CBII at Shivalik College"
-                                className="h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
+                                className="w-full h-auto rounded-xl shadow-lg object-contain hover:scale-105 transition-transform duration-500"
                             />
+
                             <div className="hidden md:block absolute -bottom-4 -right-4 bg-white p-3 rounded-lg shadow-md">
                                 <p className="font-bold text-[#841B31] text-sm md:text-base">Government Recognized</p>
                                 <p className="text-xs text-gray-600">Uttarakhand Startup Council</p>
                             </div>
-
                         </div>
 
                         <div className="grid grid-cols-2 gap-4">
@@ -70,6 +70,7 @@ const About = () => {
                             </div>
                         </div>
                     </motion.div>
+
                 </div>
 
                 {/* iHUB Section */}
@@ -172,7 +173,7 @@ const About = () => {
                                 <div className="md:w-2/3 p-6 flex flex-col justify-center">
                                     <h3 className="text-xl font-bold text-[#841B31] mb-3">iHUB AWaDH IIT Ropar</h3>
                                     <p className="text-gray-700">
-                                       Shivalik College of Engineering has signed an MoU with iHUB AWaDH, IIT Ropar to foster Innovation by facilitating the establishment of a Skilling, Research, and Innovation Hub through the AWaDH CPS Outreach Centre.
+                                        Shivalik College of Engineering has signed an MoU with iHUB AWaDH, IIT Ropar to foster Innovation by facilitating the establishment of a Skilling, Research, and Innovation Hub through the AWaDH CPS Outreach Centre.
                                     </p>
                                 </div>
                             </div>
@@ -181,7 +182,8 @@ const About = () => {
 
                     <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">
-                            <p className="text-3xl font-bold text-[#841B31]">10+</p>
+                            <p className="text-3xl font-bold text-[#841B31]">13+</p>
+
                             <p className="text-gray-600">Startups Supported</p>
                         </div>
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">

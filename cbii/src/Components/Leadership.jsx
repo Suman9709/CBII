@@ -25,7 +25,7 @@ const Leadership = () => {
                 />
               </div>
               <h3 className="text-2xl font-bold text-white text-center">Mr. Ajay Kumar Verma</h3>
-              <p className="text-blue-200 text-center mt-2">Associate Dean | Innovation Leader</p>
+              <p className="text-blue-200 text-center mt-2">CEO | Innovation Leader</p>
             </div>
 
             {/* Content Column */}

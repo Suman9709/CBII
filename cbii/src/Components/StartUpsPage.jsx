@@ -10,70 +10,60 @@ const fadeInUp = {
 const StartUpsPage = () => {
   const StartUps = [
     {
-      id: "10",
       title: "GIZMODO LLP",
       pi1: "SUNIL SHARMA",
       pi2: "SHIVRAJ",
       description: "Industrial & home automation, robotics, wireless communication devices, and smart electronics manufacturing.",
     },
     {
-      id: "9",
       title: "ALTECHWITZ LLP",
       pi1: "KULDEEP RAWAT",
       pi2: "SHUBHAM SINGH KARKI",
       description: "Power generation, electricity distribution, and consultancy in energy solutions.",
     },
     {
-      id: "8",
       title: "NANOLEAFELECT LLP",
       pi1: "SABA SABIR",
       pi2: "ANISH BRATA SAMANTA",
       description: "Electronics manufacturing including PLCs, sensors, lab instruments, and wireless communication devices.",
     },
     {
-      id: "7",
       title: "DENOLOGIX SOFTECH LLP",
       pi1: "AYUSHMAN SRIVASTAV",
       pi2: "AVINASH GULERIA",
       description: "Software development and advanced analytics services.",
     },
-    {
-      id: "6",
+    { 
       title: "ADO-TECH LLP",
       pi1: "ROHIT KUMAR SHAKYA",
       pi2: "JAIDEEP SINGH RANA",
       description: "Mechanical components manufacturing, machinery trading, and industrial consultancy.",
     },
     {
-      id: "5",
       title: "BITZFLYTECH LLP",
       pi1: "KANCHESH KUMAR",
       pi2: "MALVIKA CHANDOLA",
       description: "Home automation, security systems, smart appliances, and energy-efficient electronics.",
     },
     {
-      id: "4",
       title: "CANSTART TECH LLP",
       pi1: "ASHUTOSH BHATT",
       pi2: "AYUSH KUMAR CHANCHAL",
       description: "Industrial & home automation, robotics, and smart device manufacturing.",
     },
     {
-      id: "3",
-      title: "FLIPP OM TECH LLP",
+     title: "FLIPP OM TECH LLP",
       pi1: "ASHISH KUMAR GUPTA",
       pi2: "AJAY VERMA",
       description: "Industrial electronics, power systems, robotics, and IoT-based climate control solutions.",
     },
     {
-      id: "2",
       title: "MAPLE ROBOTICS LLP",
       pi1: "NIKHIL KANOJIA",
       pi2: "SHIVASHEESH KAUSHIK",
       description: "Avionics, space equipment, drone tech, autonomous vehicle systems, and railway automation.",
     },
     {
-      id: "1",
       title: "TULIPSOFTTECH LLP",
       pi1: "ASHISH KUMAR GUPTA",
       pi2: "MANISH SINGH",
@@ -93,10 +83,10 @@ const StartUpsPage = () => {
         <div className="mt-2 h-1 w-24 bg-[#841B31] mx-auto rounded-full"></div>
       </motion.h3>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {StartUps.map((startUp) => (
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {StartUps.map((startUp, index) => (
           <motion.div
-            key={startUp.id}
+            key={index}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}

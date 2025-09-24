@@ -93,7 +93,7 @@ const Team = () => {
     ];
 
     return (
-        <section className="py-16 px-4 bg-gray-50">
+        <section className=" bg-gray-50">
             {/* Hero Section */}
             <motion.div
                 className="relative h-screen max-h-[80vh] w-full overflow-hidden"

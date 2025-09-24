@@ -82,7 +82,7 @@ const UpcomingEvents = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 ">
       {/* Hero Carousel */}
       <motion.div 
         initial={{ opacity: 0 }}
