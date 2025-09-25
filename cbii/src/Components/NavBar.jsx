@@ -35,7 +35,7 @@ const NavBar = () => {
             subItems: [
                 { title: "Incubation Program", href: "/programs/incubation" },
                 { title: "Innovation Challenges", href: "/programs/challenges" },
-                { title: "Mentorship", href: "/programs/mentorship" }
+                // { title: "Mentorship", href: "/programs/mentorship" }
             ]
         },
         {
@@ -91,8 +91,11 @@ const NavBar = () => {
                                 </Link>
                             )
                         ))}
-                        <Link to="/apply">
-                            <button className="inline-block px-6 py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50 ">
+                        <Link
+                            to={null}
+                            onClick={(e) => e.preventDefault()} // stops navigation
+                            className="pointer-events-none">
+                            <button  className="inline-block px-6 py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50 ">
                                 Register Now
                             </button>
                         </Link>
@@ -110,41 +113,43 @@ const NavBar = () => {
                 </div>
             </div>
 
-            {mobileMenuOpen && (
-                <div className="md:hidden bg-white shadow-xl animate-slideDown">
-                    <div className="pt-2 pb-4 space-y-1">
-                        {menuItems.map((item) => (
-                            <div key={item.label} className="border-t border-gray-100">
-                                <button
-                                    className="w-full flex justify-between items-center px-6 py-4 text-base font-medium text-gray-700 hover:text-[rgb(118,8,37)] transition-colors duration-300"
-                                    onClick={() => toggleMobileDropdown(item.label)}
-                                >
-                                    {item.label}
-                                    {item.subItems.length > 0 && (openMobileDropdown === item.label ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />)}
-                                </button>
-                                {item.subItems.length > 0 && openMobileDropdown === item.label && (
-                                    <div className="pl-6 space-y-2 pb-2">
-                                        {item.subItems.map((subItem) => (
-                                            <Link
-                                                key={subItem.title}
-                                                to={subItem.href}
-                                                className="block px-4 py-2 text-base text-gray-600 hover:text-[rgb(118,8,37)] hover:bg-orange-50 rounded transition-colors duration-300"
-                                                onClick={() => setMobileMenuOpen(false)}
-                                            >
-                                                {subItem.title}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                )}
-                            </div>
-                        ))}
-                        <Link to="/apply" className="block px-6 py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 text-center ">
-                            Register Now
-                        </Link>
+            {
+                mobileMenuOpen && (
+                    <div className="md:hidden bg-white shadow-xl animate-slideDown">
+                        <div className="pt-2 pb-4 space-y-1">
+                            {menuItems.map((item) => (
+                                <div key={item.label} className="border-t border-gray-100">
+                                    <button
+                                        className="w-full flex justify-between items-center px-6 py-4 text-base font-medium text-gray-700 hover:text-[rgb(118,8,37)] transition-colors duration-300"
+                                        onClick={() => toggleMobileDropdown(item.label)}
+                                    >
+                                        {item.label}
+                                        {item.subItems.length > 0 && (openMobileDropdown === item.label ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />)}
+                                    </button>
+                                    {item.subItems.length > 0 && openMobileDropdown === item.label && (
+                                        <div className="pl-6 space-y-2 pb-2">
+                                            {item.subItems.map((subItem) => (
+                                                <Link
+                                                    key={subItem.title}
+                                                    to={subItem.href}
+                                                    className="block px-4 py-2 text-base text-gray-600 hover:text-[rgb(118,8,37)] hover:bg-orange-50 rounded transition-colors duration-300"
+                                                    onClick={() => setMobileMenuOpen(false)}
+                                                >
+                                                    {subItem.title}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                            <Link to="/apply" className="block px-6 py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 text-center ">
+                                Register Now
+                            </Link>
+                        </div>
                     </div>
-                </div>
-            )}
-        </nav>
+                )
+            }
+        </nav >
     );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import canstart from '../Images/startup/canstart.jpg'
 
 // Animation variants
 const fadeInUp = {
@@ -10,42 +11,49 @@ const fadeInUp = {
 const StartUpsPage = () => {
   const StartUps = [
     {
+      img:"",
       title: "GIZMODO LLP",
       pi1: "SUNIL SHARMA",
       pi2: "SHIVRAJ",
       description: "Industrial & home automation, robotics, wireless communication devices, and smart electronics manufacturing.",
     },
     {
+      img:"",
       title: "ALTECHWITZ LLP",
       pi1: "KULDEEP RAWAT",
       pi2: "SHUBHAM SINGH KARKI",
       description: "Power generation, electricity distribution, and consultancy in energy solutions.",
     },
     {
+      img:"",
       title: "NANOLEAFELECT LLP",
       pi1: "SABA SABIR",
       pi2: "ANISH BRATA SAMANTA",
       description: "Electronics manufacturing including PLCs, sensors, lab instruments, and wireless communication devices.",
     },
     {
+      img:"",
       title: "DENOLOGIX SOFTECH LLP",
       pi1: "AYUSHMAN SRIVASTAV",
       pi2: "AVINASH GULERIA",
       description: "Software development and advanced analytics services.",
     },
     { 
+      img:"",
       title: "ADO-TECH LLP",
       pi1: "ROHIT KUMAR SHAKYA",
       pi2: "JAIDEEP SINGH RANA",
       description: "Mechanical components manufacturing, machinery trading, and industrial consultancy.",
     },
     {
+      img:"",
       title: "BITZFLYTECH LLP",
       pi1: "KANCHESH KUMAR",
       pi2: "MALVIKA CHANDOLA",
       description: "Home automation, security systems, smart appliances, and energy-efficient electronics.",
     },
     {
+      img:canstart,
       title: "CANSTART TECH LLP",
       pi1: "ASHUTOSH BHATT",
       pi2: "AYUSH KUMAR CHANCHAL",
@@ -72,7 +80,7 @@ const StartUpsPage = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-10 mt-18">
+    <div className="container mx-auto px-4 py-4 ">
       <motion.h3
         initial="hidden"
         animate="visible"
@@ -93,9 +101,9 @@ const StartUpsPage = () => {
             variants={fadeInUp}
             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
           >
-            <div className="h-44 bg-gradient-to-r from-gray-200 to-gray-100 flex items-center justify-center">
-              <span className="text-gray-400 text-lg">No Image</span>
-            </div>
+            {/* <div className=" bg-gradient-to-r from-gray-200 to-gray-100 flex items-center justify-center">
+              <img src={startUp.img} alt="" className='object-contain h-1/3' />
+            </div> */}
             <div className="p-5">
               <h4 className="text-xl font-semibold text-gray-800 mb-2">{startUp.title}</h4>
               <p className="text-gray-600 text-sm mb-4">{startUp.description || "No description available."}</p>

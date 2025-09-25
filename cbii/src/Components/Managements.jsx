@@ -1,4 +1,6 @@
 import React from "react";
+import chairmansir from '../Images/chairman_img.png';
+import vicechairman from '../Images/ViceChairman_ShivalikCollege.jpg';
 
 const Managements = () => {
     return (
@@ -15,7 +17,7 @@ const Managements = () => {
                     {/* Image and Name */}
                     <div className="md:w-1/3 bg-[rgb(118,8,37)] flex flex-col items-center justify-center p-8 space-y-1">
                         <img
-                            src="" // placeholder image
+                            src={chairmansir} // placeholder image
                             alt="Chairman Sri Sunil Kumar"
                             className="w-40 h-40 object-cover rounded-full border-4 border-white"
                         />
@@ -39,9 +41,9 @@ const Managements = () => {
                     {/* Image and Name */}
                     <div className="md:w-1/3 bg-[rgb(118,8,37)] flex flex-col items-center justify-center p-8 space-y-1.5">
                         <img
-                            src="" // placeholder image
+                            src={vicechairman} // placeholder image
                             alt="Vice Chairman Sri Ajay Kumar"
-                            className="w-40 h-40 object-cover rounded-full border-4 border-white"
+                            className="w-40 h-40 object-cover object-center rounded-full border-4 border-white"
                         />
                         <h3 className="text-2xl font-bold text-white text-center">Mr. Ajay Kumar</h3>
                         <p className="text-white font-medium text-center">Vice Chairman</p>

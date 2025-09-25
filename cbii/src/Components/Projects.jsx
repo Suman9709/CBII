@@ -114,7 +114,7 @@ const Projects = () => {
   });
 
   return (
-    <section className="my-16 py-16 bg-gradient-to-b from-gray-50 to-white">
+    <section className="my-4 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           ref={headerRef}

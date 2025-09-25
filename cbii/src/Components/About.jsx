@@ -7,6 +7,7 @@ import msme from '../Images/Logo/msme.webp';
 import startuputtrakhand from '../Images/Logo/startuputtrakhand.png'
 import ihubdivyasampark from '../Images/Logo/ihubdivyasampark.png'
 import awadh from '../Images/Logo/awadh.svg'
+import collegeImg from '../Images/shivalik-building.jpg'
 
 const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -16,8 +17,8 @@ const fadeInUp = {
 
 const About = () => {
     return (
-        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans px-4" id='about'>
-            <div className="max-w-7xl">
+        <div className="w-full overflow-x-hidden overflow-y-hidden font-sans px-4 py-6" id='about'>
+            <div className="max-w-7xl mx-auto">
 
                 {/* CBII Section */}
                 <motion.div {...fadeInUp} viewport={{ once: true }} className="text-center mb-8">
@@ -27,7 +28,7 @@ const About = () => {
                     <p className="text-xl text-gray-600">
                         Center of Business Incubation and Innovations
                     </p>
-                    <div className="mt-8 h-1 w-24 bg-[#841B31] mx-auto rounded-full"></div>
+                    <div className="mt-4 h-1 w-24 bg-[#841B31] mx-auto rounded-full"></div>
                 </motion.div>
 
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 mb-16">
@@ -79,7 +80,7 @@ const About = () => {
                         About <span className="text-[#841B31]">iHUB Shivalik</span>
                     </h1>
                     <p className="text-xl text-gray-600">Research Innovation and Entrepreneurial Hub</p>
-                    <div className="mt-8 h-1 w-24 bg-[#841B31] mx-auto rounded-full"></div>
+                    <div className="mt-4 h-1 w-24 bg-[#841B31] mx-auto rounded-full"></div>
                 </motion.div>
 
                 <div className="flex flex-col lg:flex-row-reverse gap-8 lg:gap-12">
@@ -100,11 +101,11 @@ const About = () => {
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2 relative">
                         <div className="relative h-full" style={{ height: '57.5%', minHeight: '380px' }}>
                             <img
-                                src={divyasampark}
+                                src={collegeImg}
                                 alt="iHub Shivalik at Shivalik College"
                                 className="absolute h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
                             />
-                            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md hidden lg:block">
+                            <div className="absolute -bottom-6 -left-4 bg-white p-4 rounded-lg shadow-md hidden lg:block">
                                 <p className="font-bold  text-[#841B31]">iHUB DivyaSampark</p>
                                 <p className="text-sm text-gray-600">IIT Roorkee Partner</p>
                             </div>
@@ -180,7 +181,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 border border-[841B31] rounded-xl p-4 shadow-xl">
                         <div className="bg-red-50 p-4 rounded-lg text-center hover:bg-red-100 transition-colors">
                             <p className="text-3xl font-bold text-[#841B31]">13+</p>
 

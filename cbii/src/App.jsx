@@ -19,6 +19,9 @@ import Footer from "./Components/Footer";
 import ExpertMentors from "./Pages/ExpertMentors";
 import EventsPage from "./Pages/EventsPage";
 import EventsDetails from "./Pages/EventsDetails";
+import UpcomingEvents from "./Pages/UpcomingEvents";
+import Ideathon from "./Components/Ideathon";
+import Hackathon from "./Components/Hackathon";
 
 
 const AppLayout = () => {
@@ -68,7 +71,20 @@ const appRouter = createBrowserRouter([
       { path: "/programs/incubation", element: <IncubationPrograms /> },
       { path: "/incubationprogramregistration", element: <IncubationRegistrationForm /> },
       { path: "/incubationprogramdetails", element: <IncubationProgramDetails /> },
-      // { path: "/events/upcoming", element: <UpcomingEvents /> },
+
+      {
+        path: "/events/upcoming",
+        element: <UpcomingEvents />,
+      },
+      {
+        path: "/events/upcoming/ideathon",
+        element: <Ideathon />, // Renders Ideathon page separately
+      },
+      {
+        path: "/events/upcoming/hackathon",
+        element: <Hackathon />, // Renders Hackathon page separately
+      },
+
       { path: "/events/gallery", element: <EventsPage /> },
       { path: "/events/:id", element: <EventsDetails /> },
       // { path: "/upcomingEventForm", element: <UpcommngEventsForm /> },

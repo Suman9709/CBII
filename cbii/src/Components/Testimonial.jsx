@@ -5,6 +5,8 @@ import cyberaltron from '../Images/Logo/cyberaltron.png';
 import startup2 from '../Images/Aimg1.png';
 import startup3 from '../Images/Aimg1.png';
 import startup4 from '../Images/Aimg1.png';
+import agrijoy from '../Images/Logo/agrijoy.avif';
+import canstart from '../Images/Logo/canstart.jpg';
 
 const Testimonial = () => {
   const ref = useRef(null);
@@ -16,24 +18,27 @@ const Testimonial = () => {
   const testimonials = [
     {
       logo: cyberaltron,
-      quote:
-        "Cyberultron expresses deep gratitude to Shivalik College of Engineering, especially Mr. Ajay Kumar and Prahlad Sir, for their exceptional support in fostering industry-academia collaboration. Their efforts streamlined the funding process and strengthened future partnership prospects.",
+      quote: "Cyberultron expresses deep gratitude to Shivalik College of Engineering, especially Mr. Ajay Kumar and Prahlad Sir, for their exceptional support in fostering industry-academia collaboration. Their efforts streamlined the funding process and strengthened future partnership prospects.",
       name: "Cyberultron Consulting Private Limited",
+      founder: "Vatrul Goyal",
     },
     {
-      logo: startup2,
-      quote: "The mentorship we received transformed our business model.",
-      name: "EcoSolutions Ltd",
+      // logo: "Flipp Om",
+      quote: "Being part of the incubator at CBII has truly transformed how we at FLIPP OM TECH LLP think about scaling our tech solutions.",
+      name: "FLIPP OM TECH LLP",
+      founder: " Mr. Ajay Kumar Verma"
     },
     {
-      logo: startup3,
-      quote: "Access to iHUB's network opened doors we couldn't have imagined.",
-      name: "HealthTrack Systems",
+      logo: agrijoy,
+      quote: "The support and guidance we received through the Business Incubation program at CBII have been instrumental in shaping Agrijoy Pvt. Ltd. into a scalable and impactful enterprise.",
+      name: "Agrijoy Pvt. Ltd.",
+      founder: "Mr. Chandramani"
     },
     {
-      logo: startup4,
-      quote: "The funding and guidance helped us scale rapidly.",
-      name: "EduFuture Academy",
+      logo: canstart,
+      quote: "The incubation support provided by CBII has been a game-changer for CANSTART TECH LLP. From the very beginning, we received structured mentorship, access to modern infrastructure, and timely guidance that helped us navigate the challenges of building a technology-driven startup.",
+      name: "CANSTART TECH LLP",
+      founder: "Ayush Kumar Chanchal",
     },
   ];
 
@@ -53,7 +58,7 @@ const Testimonial = () => {
   }, [isInView, isPaused, controls]);
 
   return (
-    <section ref={ref} className="py-12 bg-gray-50 mt-16">
+    <section ref={ref} className="py-12 bg-gray-50 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           What Our <span className="text-[#841B31]">Startups Say</span>
@@ -74,17 +79,27 @@ const Testimonial = () => {
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >
-                <img
-                  src={item.logo}
-                  alt={item.name}
-                  className="h-16 object-contain mb-4"
-                />
+                {item.logo ? (
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    className="h-16 object-contain mb-4"
+                  />
+                ) : (
+                  <p className="text-lg font-bold text-amber-700 mb-4">{item.name}</p>
+                )}
+
                 <div className="text-gray-700 text-center italic mb-2 overflow-y-auto max-h-24">
                   "{item.quote}"
                 </div>
                 <p className="text-[#841B31] font-medium text-center">
                   {item.name}
                 </p>
+                <div className="flex items-center justify-center gap-1">
+                  <div className="h-[2px] w-[10px] bg-[#841B31]"></div>
+                  <p className="text-[#841B31] font-medium">{item.founder}</p>
+                </div>
+
               </motion.div>
             ))}
           </motion.div>

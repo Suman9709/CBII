@@ -1,28 +1,31 @@
 import React from 'react';
-import aboutHero from '../Images/aimg13.webp'; // Replace with your actual image path
+import aboutHero from '../Images/aimg13.webp';
+import about from '../Images/about.png'
+import about1 from '../Images/about1.jpg'
+import about2 from '../Images/about2.jpg'
 
 const MissionVision = () => {
   return (
     <div className="min-h-screen">
       {/* Full-screen hero image */}
-      <div className="relative h-screen max-h-[80vh] w-full overflow-hidden">
+      <div className="relative h-screen max-h-[90vh] w-full overflow-hidden">
         <img
-          src={aboutHero}
+          src={about2}
           alt="About iHUB Shivalik"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-fill "
         />
-        <div className="absolute inset-0  flex items-center justify-center">
+        {/* <div className="absolute inset-0  flex items-center justify-center">
           <div className="text-center px-4">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">About iHUB Shivalik</h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
               Fostering innovation and entrepreneurship through cutting-edge incubation programs
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Mission & Vision Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Vision Section */}
         <div className="mb-20">
           <div className="flex items-center mb-8">

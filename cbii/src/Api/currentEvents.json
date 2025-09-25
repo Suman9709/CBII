@@ -1,0 +1,9 @@
+[
+    {
+        "id":1,
+        "name":"Ideathon",
+        "description":"A 24-hour event where participants brainstorm and pitch innovative ideas to solve real",
+        "img":"/ApiImage/ideathon.png",
+        "buttonName":"Register Now"
+    }
+]

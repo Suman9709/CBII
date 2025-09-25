@@ -1,0 +1,48 @@
+{
+    "phases": [
+        {
+            "phaseTag": "PHASE 1",
+            "title": "💡 Idea pitching and first round of evaluation",
+            "content": []
+        },
+        {
+            "phaseTag": "PHASE 2",
+            "title": "DAY 1: Workshop & Hands-on Session",
+            "content": [
+                {
+                    "type": "list",
+                    "heading": "Key Activities:",
+                    "items": [
+                        "Introduction to Design Thinking & Problem Solving.",
+                        "Understanding societal challenges through UN SDGs.",
+                        "Tech modules: IoT, AI, Robotics, Blockchain, CPS (Cyber-Physical Systems), Sustainability Engineering."
+                    ]
+                },
+                {
+                    "type": "list",
+                    "heading": "Mentorship & Exploration:",
+                    "items": [
+                        "Mentorship: Sessions led by industry leaders and academic experts.",
+                        "Team Formation: Interdisciplinary teams of students and startups.",
+                        "Problem Statement Exploration: Challenges from sectors like Health, Agriculture, Energy, Water, Infrastructure, Environment, Governance, Security, etc."
+                    ]
+                }
+            ]
+        },
+        {
+            "phaseTag": "PHASE 2",
+            "title": "DAY 2",
+            "content": [
+                {
+                    "type": "paragraph",
+                    "text": "The final round of evaluation will take place at CBII, Shivalik College of Engineering. "
+                }
+            ]
+        },
+        {
+            "phaseTag": "PHASE 3",
+            "title": "🚀 Incubation of Idea and Product/Service Development",
+            "content": []
+        }
+    ]
+}
