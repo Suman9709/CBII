@@ -27,7 +27,7 @@ const Projects = () => {
       id: 1,
       title: "CyberUltron-Defending Cyber Attacks",
       pi: "Mr. Vatrul Goyal",
-      budget: "₹15.00 Lakhs",
+      budget: "₹15.00 ",
       description: " Innovators have a set of techniques used to protect the system, accessibility, applications, confidentiality, data, and network from cyber threats.",
       image: cyberaltron,
       agency: " MSME, New Delhi"
@@ -36,7 +36,7 @@ const Projects = () => {
       id: 2,
       title: "CyberZoo: Developing a Cyber-Physical Animal Tamer System",
       pi: "Mr. Kumar Rethik",
-      budget: "₹9.60 Lakhs",
+      budget: "₹9.60 ",
       description: "Innovative system combining cyber-physical technologies for animal behavior management.",
       image: animalTramerDevice,
       agency: "iHUB DivyaSampark IIT Roorkee"
@@ -45,7 +45,7 @@ const Projects = () => {
       id: 3,
       title: "ParkEase: Building an Intelligent Smart Parking System",
       pi: "Mr. Sartaj Khan",
-      budget: "₹10.00 Lakhs",
+      budget: "₹10.00 ",
       description: "AI-powered parking solution that optimizes urban parking space utilization.",
       image: smartparking,
       agency: "iHUB DivyaSampark IIT Roorkee"
@@ -54,7 +54,7 @@ const Projects = () => {
       id: 4,
       title: "Hybrid Arial-Aquatic Drone: Design and Development",
       pi: "Dr. Abhishek Jha",
-      budget: "₹9.85 Lakhs",
+      budget: "₹9.85 ",
       description: "Next-generation drone capable of seamless transition between air and water environments.",
       image: hybrid_arial_aquatic_drone,
       agency: "iHUB DivyaSampark IIT Roorkee"
@@ -63,7 +63,7 @@ const Projects = () => {
       id: 5,
       title: "IoT Based Waste Management System",
       pi: "Dr. Hemant Nautiyal",
-      budget: "₹9.50 Lakhs",
+      budget: "₹9.50 ",
       description: "Smart waste collection system using IoT sensors for efficient city sanitation.",
       image: smartDustbin,
       agency: "iHUB DivyaSampark IIT Roorkee"
@@ -72,7 +72,7 @@ const Projects = () => {
       id: 6,
       title: "EyesOnyx: AI Smart Glasses for Blind & Visually Impaired",
       pi: "Dr. Sono Bhardwaj",
-      budget: "₹9.90 Lakhs",
+      budget: "₹9.90 ",
       description: "Assistive technology glasses with real-time object recognition and navigation.",
       image: EyesOnyx,
       agency: "iHUB DivyaSampark IIT Roorkee"
@@ -81,7 +81,7 @@ const Projects = () => {
       id: 7,
       title: "Braceguard: Smart Wearable Safety Device for Women",
       pi: "Akanksha Bhist Ayush Bahuguna",
-      budget: "₹0.50 Lakhs",
+      budget: "₹0.50 ",
       description: "We will develop a compact and smart wearable device (bracelet) that provides real-time emergency assistance.",
       image: womenSafetyDevice,
       agency: "iHUB Shivalik"
@@ -90,7 +90,7 @@ const Projects = () => {
       id: 8,
       title: "QUADRUPED ROBOT (‘CHANDRA’)",
       pi: "Ayush Kumar Chanchal",
-      budget: "₹0.50 Lakhs",
+      budget: "₹0.50 ",
       description: "The quadruped robot is designed to autonomously traverse uneven terrain, identify obstacles, and assist in search and rescue missions.",
       image: robot,
       agency: "iHUB Shivalik"
@@ -99,7 +99,7 @@ const Projects = () => {
       id: 9,
       title: "AI-Based Smart Hydroponic System",
       pi: "Krish Kumar Sinha, Akanksha Raj, Mrinal Shekhar",
-      budget: "₹0.50 Lakhs",
+      budget: "₹0.50 ",
       description: "Design a smart hydroponic system integrating IoT and AI to optimize plant growth by monitoring and controlling environmental factors.",
       image: hydroPhonicSystem,
       agency: "iHUB Shivalik"
@@ -118,8 +118,13 @@ const Projects = () => {
 
   const totalproject = projects.length;
 
+  const totalBudget = projects.reduce((sum, project) => {
+    const cleaned = project.budget.replace(/[₹,]/g, '').trim();
+    const numericBudget = parseFloat(cleaned);
+    return sum + (isNaN(numericBudget) ? 0 : numericBudget);
+  }, 0);
 
-  const totalBudget = projects.reduce((sum, projects)=>{})
+
 
   return (
     <section className="my-4 bg-gradient-to-b from-gray-50 to-white">
@@ -211,7 +216,7 @@ const Projects = () => {
               <p className="text-gray-200">Ongoing Projects</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <p className="text-4xl font-bold mb-2">₹49.85L</p>
+              <p className="text-4xl font-bold mb-2">₹{totalBudget}</p>
               <p className="text-gray-200">Total Funding</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
