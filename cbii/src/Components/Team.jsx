@@ -7,7 +7,11 @@ import ceo from '../Images/ak.jpg'
 import surmadhurpant from '../Images/surmadhurpant.webp'
 import yashendra from "../Images/yashendra.png"
 import abhishekjha from "../Images/abhishek.jpg"
-
+import manishgaur from '../Images/manishgaurcpy.jpg'
+import ankitsir from '../Images/ankitsir.jpg'
+import ashishguptasir from '../Images/ashishguptasir.jpg'
+import khsitijjain from '../Images/kshitijjain.jpg'
+import team from '../Images/team.jpg'
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -18,56 +22,56 @@ const fadeInUp = {
 };
 
 const Team = () => {
-       const teamMembers = [
+    const teamMembers = [
         {
             id: 1,
             name: 'Prof. (Dr.) Prahlad Singh',
             gender: 'Male',
             designation: 'Chairman',
-            photo: [director]
+            photo: director
         },
         {
             id: 2,
             name: 'Mr. Ajay Kumar Verma',
             gender: 'Male',
             designation: 'Associate Dean-CBII & CEO, iHub Shivalik',
-            photo: [ceo]
+            photo: ceo
         },
         {
             id: 3,
             name: 'Dr. Surmadhur Pant',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: [surmadhurpant]
+            photo: surmadhurpant
         },
         {
             id: 4,
             name: 'Dr. Abhishek Jha',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo:[abhishekjha]
+            photo: abhishekjha
         },
         {
             id: 5,
             name: 'Mr. Ashish Gupta',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: '/images/team/ashish-gupta.jpg'
+            photo: ashishguptasir
         },
-      
+
         {
             id: 8,
             name: 'Mr. Yashendra Sharma',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: [yashendra]
+            photo: yashendra
         },
         {
             id: 10,
             name: 'Mr. Ankit Kumar',
             gender: 'Male',
             designation: 'Mentor and Professional Member',
-            photo: '/images/team/ankit-kumar.jpg'
+            photo: ankitsir
         },
         {
             id: 11,
@@ -76,26 +80,41 @@ const Team = () => {
             designation: 'Mentor and Professional Member',
             photo: '/images/team/shusheel-kumar.jpg'
         },
+
         {
             id: 12,
+            name: 'Dr. Amrita Singh',
+            gender: 'Female',
+            designation: 'Mentor and Professional Member',
+            photo: '/images/team/amrita.jpg'
+        },
+        {
+            id: 13,
+            name: 'Mr. Kshitij Jain',
+            gender: 'Male',
+            designation: 'Mentor and Professional Member',
+            photo: khsitijjain
+        },
+        {
+            id: 25,
             name: 'Mrs. Renu Soni',
             gender: 'Female',
             designation: 'Deputy Manager',
             photo: '/images/team/renu-soni.jpg'
         },
         {
-            id: 13,
+            id: 26,
             name: 'Mr. Manish Gaur',
             gender: 'Male',
             designation: 'Office Assistant',
-            photo: '/images/team/manish-gaur.jpg'
+            photo: manishgaur
         }
     ];
 
     return (
         <section className=" bg-gray-50">
             {/* Hero Section */}
-            <motion.div
+            {/* <motion.div
                 className="relative h-screen max-h-[80vh] w-full overflow-hidden"
                 initial="hidden"
                 whileInView="visible"
@@ -103,9 +122,9 @@ const Team = () => {
                 variants={fadeInUp}
             >
                 <img
-                    src={aboutHero}
+                    src={team}
                     alt="About iHUB Shivalik"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
                     <motion.div
@@ -118,7 +137,7 @@ const Team = () => {
                         </p>
                     </motion.div>
                 </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Leadership Section */}
             <Leadership />
@@ -164,7 +183,7 @@ const Team = () => {
                                 <img
                                     src={member.photo}
                                     alt={member.name}
-                                    className="absolute top-0 left-0 w-full h-full object-cover"
+                                    className="absolute top-0 left-0 w-full h-full object-cover object-top"
                                     onError={(e) => {
                                         e.target.onerror = null;
                                         e.target.src = '/images/team/placeholder.jpg';
@@ -175,10 +194,10 @@ const Team = () => {
                                 <h3 className="text-xl font-bold text-gray-800 mb-1">{member.name}</h3>
                                 <p className="text-blue-600 font-medium mb-2">{member.designation}</p>
                                 <div className="flex items-center text-gray-500">
-                                    <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                    {/* <svg className="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                                     </svg>
-                                    <span className="text-sm">{member.gender}</span>
+                                    <span className="text-sm">{member.gender}</span> */}
                                 </div>
                             </div>
                         </motion.div>

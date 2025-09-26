@@ -44,8 +44,8 @@ const NavBar = () => {
             subItems: [
                 { title: "Startups", href: "/startups/current" },
                 { title: "Projects", href: "/project/current" },
-                { title: "Alumni", href: "/startups/alumni" },
-                { title: "Success Stories", href: "/startups/success-stories" }
+                // { title: "Alumni", href: "/startups/alumni" },
+                // { title: "Success Stories", href: "/startups/success-stories" }
             ]
         },
         {
@@ -95,7 +95,7 @@ const NavBar = () => {
                             to={null}
                             onClick={(e) => e.preventDefault()} // stops navigation
                             className="pointer-events-none">
-                            <button  className="inline-block px-6 py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50 ">
+                            <button className="inline-block px-6 py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50 ">
                                 Register Now
                             </button>
                         </Link>

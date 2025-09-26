@@ -1,16 +1,26 @@
-
-
-
 [
+{
+  "id":9,
+  "img":"/ApiImage/ideathon5.jpeg",
+  "eventName":"MSME Hackathon",
+  "description":"MSME Idea Hackathon 5.0 aims to promote inclusive innovation by offering a platform for citizens to ideate, design, and develop solutions addressing critical national challenges. The objective is to transform high-potential ideas into scalable MSME-driven ventures that align with the pillars of Aatmanirbhar Bharat, Make in India, and Viksit Bharat @2047. This initiative will enable innovators to access mentorship, funding, incubation support, and a nationwide recognition platform."
+},
+  {
+    "id": 8,
+    "img": "/ApiImage/pe2.jpg",
+    "eventName": "Project Exhibition",
+    "description": "iHUB Shivalik, and Shivalik College of Engineering, Dehradun, organized a Inter/Intra Institutional Business Plan Competition and Reward the Best Innovations and deposition in the Institution’s YUKTI Innovation Repository dated on 6 May, 2025 in Incubation Centre shivalik College. 35 Students was Participated in this presentation. Resource person from CEO iHUB divyasampark IIT Roorkee, Mr.Manish Anand have undergone every project and gone through every idea. The sessions were organized at Incubation center (iHUB Shivalik) from 10:00AM to 02:00PM. The ideas of the students gave many ways to develop the society of technology nation moreover the best ideas were grand with high price and motivated them with their ideas. Many students gave attention on the session and they are very interested to take part as innovative idea creation members, they presented their ideas with project and gave my solution above their creation. Many students were gained knowledge about the problem statement and well explained the statement and solution. "
+  },
+ 
   {
     "id": 1,
-    "img": "/ApiImage/Aimg1.png",
+    "img": "/ApiImage/shivatech2024.jpg",
     "eventName": "Shivatech-2024",
     "description": "On November 16, 2024, Shivalik College of Engineering, in collaboration with USERC, organized Science Championship 3.0. The highlight of the program was the innovation and brilliance of young minds. The event had diverse participation from different reputed schools, both private and public. The projects and models based on themes of science, society, and environment proved that the next generation is so close to scientific excellence. The event hosted more than 80 schools, 180 teams, and over 800 students. With an innovative theme, the event focused on themes of Science, Society, and Environment. The event was designed to instill a deep passion for technology and broadening scientific knowledge."
   },
   {
     "id": 2,
-    "img": "/ApiImage/Aimg2.png",
+    "img": "/ApiImage/hackathon2024.jpg",
     "eventName": "Hackathon 2024",
     "description": "The Incubation Center of Shivalik College, CBII and iHUB Shivalik organised Hackathon 2024 with a vision to generate high-value, actionable business ideas and product concepts. The event was organised to foster a spirit of entrepreneurship among young minds. More than 300 students from 63+ teams participated in this collaborative technical event, proposing solutions to industrial and social problem statements. The event had participation from various institutes, including colleges and universities, from regions students of Uttarakhand, UP, and the NCR region. During the event, the participating teams built actionable business ideas and product concepts by working relentlessly for 30 hours."
   },
@@ -19,7 +29,29 @@
     "img": "/ApiImage/Aimg3.png",
     "eventName": "Science Championship 3.0",
     "description": "On November 16, 2024, Shivalik College of Engineering, in collaboration with USERC, organized Science Championship 3.0. The highlight of the program was the innovation and brilliance of young minds. The event had diverse participation from different reputed schools, both private and public. The projects and models based on themes of science, society, and environment proved that the next generation is so close to scientific excellence. The event hosted more than 80 schools, 180 teams, and over 800 students. With an innovative theme, the event focused on themes of Science, Society, and Environment. The event was designed to instill a deep passion for technology and broadening scientific knowledge."
+  },
+  {
+    "id": 4,
+    "img": "/ApiImage/hackathon2023.jpg",
+    "eventName": "Hackathon 2023",
+    "description": "On Sptember 25, 2023, Shivalik College of Engineering, in collaboration with USERC, organized Hackathon 2023. The event was organized to foster a spirit of entrepreneurship among young minds. More than 200 students from 50+ teams participated in this collaborative technical event, proposing solutions to industrial and social problem statements. The event had participation from various institutes, including colleges and universities, from regions students of Uttarakhand, UP, and the NCR region. During the event, the participating teams built actionable business ideas and product concepts by working relentlessly for 30 hours."
+  },
+   {
+    "id": 9,
+    "img": "/ApiImage/ipr.jpg",
+    "eventName": "IPR Workshop",
+    "description": "The Institution Innovation Council, iHUB shivalik,  Shivalik College of Engineering, Organized a guest Lecture “Basics of Intellectual Property Rights and Its Importance for Innovators and Entrepreneurs” dated on 30 November, 2024 in  Shivalik College’s seminar hall. This seminar was participated 45 students. The resource person began the session by asking the students about the understanding of IPR and Patenting knowledge, and how much one benefits by patent rights. After this brief introductory interaction, he started the session with the presentation “Introduction to IPR and Patent Filing Strategies.” He stated that Intellectual Property (IP) refers to creations of the mind, inventions, literary and artistic works, and symbols, names, images, and designs used in science, technology, and commerce. Then he started explaining the various types of Intellectual Property like Patents, Copy Rights, Designs, Geographical Indications, Dr. Umesh Banakar, Professor and President of Banakar Consulting Services He explained the basic differences how one can differentiate the hardware product patenting and the various contemporary designs patenting."
+  },
+   {
+    "id": 6,
+    "img": "/ApiImage/startupbootcamp.jpg",
+    "eventName": "Startup BootCamp",
+    "description": "The Directorate of Industries, Uttarakhand, in collaboration with IIM Kashipur FIED and Shivalik College of Engineering, Dehradun, successfully organized Start-up Boot Camps on the 3rd and 4th of March 2023 at Shivalik College of Engineering, Dehradun.These boot camps empowered start-ups and aspiring entrepreneurs by enabling them to grasp the nuances of entrepreneurship, refine their skills in drafting impactful business proposals, and master the art of effective pitching. The platform also fostered learning, interaction, and valuable feedback from industry experts, start-up mentors, and renowned academicians.The two-day camp was divided into distinct phases: Day 1 featured intensive training sessions, guest lectures, and practice pitching, while Day 2 culminated with final business pitches presented to an evaluation committee. From these, the top 10 innovative ideas were shortlisted across 13 districts of Uttarakhand. This initiative marked a collaborative effort where the support extended by the IIM Kashipur FIED team played a pivotal role in shaping a platform that nurtured innovation, entrepreneurial spirit, and future-ready ventures."
+  },
+  {
+    "id": 5,
+    "img": "",
+    "eventName": "Shivatech-2023",
+    "description": ""
   }
-
-  
 ]

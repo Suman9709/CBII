@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import EventsCard from "../Components/EventsCard";
 
-import hackathonImg from "../Images/HACKATHON.png"
+import hackathonPic from '../Images/EventPoster/hackathon2025.png'
+import sih2025 from '../Images/EventPoster/sih2025.jpg'
+import UpcommingEventcard from "../Components/UpcommingEventCard";
+import msmehackathon50 from '../Images/EventPoster/ideathon5.jpeg'
+import ideathon from '../Images/EventPoster/ideathon5.png'
 
 const UpcomingEvents = () => {
 
-  const images = [hackathonImg, hackathonImg, hackathonImg];
+  const images = [ideathon, sih2025, hackathonPic];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -18,9 +22,9 @@ const UpcomingEvents = () => {
   }, [images.length])
   return (
 
-    <div className="w-full flex flex-col justify-center items-center p-4 ">
+    <div className="w-full flex flex-col justify-center items-center p-2 ">
 
-      <div className="relative w-full h-64 sm:h-80 md:h-[600px] overflow-hidden rounded-xl mb-10">
+      <div className="relative w-full h-62 sm:h-80 md:h-[500px] overflow-hidden rounded-xl mb-4">
         <div className="flex transition-transform duration-700" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {
             images.map((img, index) => (
@@ -28,13 +32,13 @@ const UpcomingEvents = () => {
                 key={index}
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="w-full h-auto object-fill flex-shrink-0"
+                className="w-full h-48 object-conatin flex-shrink-0 sm:h-80 md:h-[450px]"
               />
             ))
           }
         </div>
 
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {
             images.map((_, index) => (
               <div key={index}
@@ -46,21 +50,45 @@ const UpcomingEvents = () => {
 
       </div>
 
-      <div className="flex w-full flex-wrap gap-10 justify-center items-center">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4">
         <Link to="/events/upcoming/ideathon">
-          <EventsCard
-            img=""
+          <UpcommingEventcard
+            img={ideathon}
             eventName="Ideathon 2025"
             description="The Center of Business Incubation and Innovation (CBII) at Shivalik College of Engineering, Dehradun, is committed to fostering entrepreneurship and innovation."
             buttonName="Know More"
           />
         </Link>
-        <Link to="/events/upcoming/hackathon">
-          <EventsCard
-            img={hackathonImg}
-            eventName="Hackathon 2025"
-            description="A 24-hour event where participants brainstorm and pitch innovative ideas to solve real"
-            buttonName="Know More"
+
+
+        <a
+          href="https://forms.gle/fkd49F4ps8feSsWY7"
+          target="_blank"
+        >
+          <UpcommingEventcard
+            img={sih2025}
+            eventName="SIH Hackathon 2025"
+            description="CBII, Shivalik College of Engineering, will be conducting an Internal Hackathon on 29th September 2025 as the first phase of the Smart India Hackathon (SIH) 2025."
+            buttonName="Register Now"
+          />
+        </a>
+
+        <Link to="/event/upcoming/shivatech">
+          <UpcommingEventcard
+            img={hackathonPic}
+            eventName="Shivatech 2025"
+            description="Technology is not just about machines—it is about reimagining the future. Shivatech 2025 is a National Level Inter-College Technical Fest, designed to ignite creativity, innovation, and problem-solving among young minds. "
+            buttonName="Register Now"
+          />
+        </Link>
+
+
+        <Link to="/event/upcoming/sciencechampioship">
+          <UpcommingEventcard
+            img={hackathonPic}
+            eventName="Science Championship 4.0 "
+            description="Science Championship 4.0 is a State-Level Inter-School Scientific Innovation Competition curated by CBII, Shivalik College of Engineering to identify, nurture, and inspire the scientific leaders of tomorrow."
+            buttonName="Register Now"
           />
         </Link>
       </div>

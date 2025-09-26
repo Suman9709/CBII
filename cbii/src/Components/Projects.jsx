@@ -8,6 +8,9 @@ import robot from '../Images/Project/robot.jpg';
 import smartDustbin from '../Images/Project/smartDustbin.jpg';
 import smartparking from '../Images/Project/smartparking.jpg';
 import womenSafetyDevice from '../Images/Project/womenSafetyDevice.jpg';
+import cyberaltron from '../Images/Project/cyberaltron.jpg'
+import EyesOnyx from '../Images/Project/EyesOnyx.jpg'
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -26,7 +29,7 @@ const Projects = () => {
       pi: "Mr. Vatrul Goyal",
       budget: "₹15.00 Lakhs",
       description: " Innovators have a set of techniques used to protect the system, accessibility, applications, confidentiality, data, and network from cyber threats.",
-      image: "https://source.unsplash.com/random/800x500/?glasses,blind",
+      image: cyberaltron,
       agency: " MSME, New Delhi"
     },
     {
@@ -71,7 +74,7 @@ const Projects = () => {
       pi: "Dr. Sono Bhardwaj",
       budget: "₹9.90 Lakhs",
       description: "Assistive technology glasses with real-time object recognition and navigation.",
-      image: "https://source.unsplash.com/random/800x500/?glasses,blind",
+      image: EyesOnyx,
       agency: "iHUB DivyaSampark IIT Roorkee"
     },
     {
@@ -112,6 +115,11 @@ const Projects = () => {
     threshold: 0.1,
     triggerOnce: true
   });
+
+  const totalproject = projects.length;
+
+
+  const totalBudget = projects.reduce((sum, projects)=>{})
 
   return (
     <section className="my-4 bg-gradient-to-b from-gray-50 to-white">
@@ -199,7 +207,7 @@ const Projects = () => {
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <motion.div variants={fadeInUp}>
-              <p className="text-4xl font-bold mb-2">{projects.length}+</p>
+              <p className="text-4xl font-bold mb-2">{totalproject}+</p>
               <p className="text-gray-200">Ongoing Projects</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
@@ -207,11 +215,11 @@ const Projects = () => {
               <p className="text-gray-200">Total Funding</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <p className="text-4xl font-bold mb-2">8+</p>
+              <p className="text-4xl font-bold mb-2">16+</p>
               <p className="text-gray-200">Researchers</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <p className="text-4xl font-bold mb-2">3+</p>
+              <p className="text-4xl font-bold mb-2">150+</p>
               <p className="text-gray-200">Patents Filed</p>
             </motion.div>
           </div>

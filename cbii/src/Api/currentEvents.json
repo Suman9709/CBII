@@ -1,9 +1,35 @@
 [
     {
-        "id":1,
-        "name":"Ideathon",
-        "description":"A 24-hour event where participants brainstorm and pitch innovative ideas to solve real",
-        "img":"/ApiImage/ideathon.png",
-        "buttonName":"Register Now"
+        "id": 1,
+        "name": "SIH Hackathon 2025",
+        "description": "A 24-hour event where participants brainstorm and pitch innovative ideas to solve real",
+        "img": "/ApiImage/ideathon.png",
+        "buttonName": "Register Now"
+    },
+    {
+        "id": 2,
+        "name": "Shivatech 2025",
+        "description": [
+            "Technology is not just about machines—it is about reimagining the future.",
+            "Shivatech 2025 is a National Level Inter-College Technical Fest, designed to ignite creativity, innovation, and problem-solving among young minds. It is a confluence of engineering, management, agriculture, and pharmacy students, all collaborating to shape ideas into impactful solutions.",
+            "By combining Ideathon, Hackathon, and a one-day Technical Fest, Shivatech 2025 becomes a 3-day innovation marathon that nurtures ideas, builds prototypes, and celebrates excellence."
+        ],
+        "img": "/ApiImage/ideathon.png",
+        "buttonName": "Register Now"
+    },
+
+    {
+        "id": 19,
+        "name": "Sciencechampionship 4.0",
+        "description": "A 24-hour event where participants brainstorm and pitch innovative ideas to solve real",
+        "img": "/ApiImage/ideathon.png",
+        "buttonName": "Register Now"
+    },
+    {
+        "id": 20,
+        "name": "MSME Hackathon 2025",
+        "description": "A 24-hour event where participants brainstorm and pitch innovative ideas to solve real",
+        "img": "/ApiImage/ideathon.png",
+        "buttonName": "Register Now"
     }
 ]

@@ -9,7 +9,7 @@ const EventsCard = ({ img, eventName, description, buttonName }) => {
         <img
           src={img}
           alt={eventName}
-          className="w-full h-full object-contain transition-transform duration-500 hover:scale-110"
+          className="w-full h-full object-cover object-top-left transition-transform duration-500 hover:scale-110"
         />
         {/* Optional overlay for text or gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>

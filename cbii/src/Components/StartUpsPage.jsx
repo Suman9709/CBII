@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import canstart from '../Images/startup/canstart.jpg'
+// import canstart from '../Images/startup/canstart.jpg'
 
 // Animation variants
 const fadeInUp = {
@@ -53,7 +53,7 @@ const StartUpsPage = () => {
       description: "Home automation, security systems, smart appliances, and energy-efficient electronics.",
     },
     {
-      img:canstart,
+      img:"",
       title: "CANSTART TECH LLP",
       pi1: "ASHUTOSH BHATT",
       pi2: "AYUSH KUMAR CHANCHAL",

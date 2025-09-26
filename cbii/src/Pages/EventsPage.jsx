@@ -16,7 +16,7 @@ const EventsPage = () => {
         {events.map((event) => (
           <Link
             key={event.id}
-            to={`/events/${event.id}`}
+            to={`/events/pastevents/${event.id}`}
             className="block"
           >
             <EventsCard

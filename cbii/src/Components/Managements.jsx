@@ -22,7 +22,7 @@ const Managements = () => {
                             className="w-40 h-40 object-cover rounded-full border-4 border-white"
                         />
                         <h3 className="text-2xl font-bold text-white text-center">Sri Sunil Kumar</h3>
-                        <p className="text-white font-medium text-center">Chairman</p>
+                        <p className="text-white font-medium text-center">Hon’ble Chairman</p>
                     </div>
                     {/* Content */}
                     <div className="md:w-2/3 p-8">
@@ -45,8 +45,8 @@ const Managements = () => {
                             alt="Vice Chairman Sri Ajay Kumar"
                             className="w-40 h-40 object-cover object-center rounded-full border-4 border-white"
                         />
-                        <h3 className="text-2xl font-bold text-white text-center">Mr. Ajay Kumar</h3>
-                        <p className="text-white font-medium text-center">Vice Chairman</p>
+                        <h3 className="text-2xl font-bold text-white text-center">Sri Ajay Kumar</h3>
+                        <p className="text-white font-medium text-center"> Hon’ble Vice Chairman</p>
                     </div>
                     {/* Content */}
                     <div className="md:w-2/3 p-8">

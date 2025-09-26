@@ -8,6 +8,7 @@ import startuputtrakhand from '../Images/Logo/startuputtrakhand.png'
 import ihubdivyasampark from '../Images/Logo/ihubdivyasampark.png'
 import awadh from '../Images/Logo/awadh.svg'
 import collegeImg from '../Images/shivalik-building.jpg'
+import cbii from '../Images/cbii.jpg'
 
 const fadeInUp = {
     initial: { opacity: 0, y: 50 },
@@ -101,9 +102,9 @@ const About = () => {
                     <motion.div {...fadeInUp} viewport={{ once: true }} className="lg:w-1/2 relative">
                         <div className="relative h-full" style={{ height: '57.5%', minHeight: '380px' }}>
                             <img
-                                src={collegeImg}
+                                src={cbii}
                                 alt="iHub Shivalik at Shivalik College"
-                                className="absolute h-full w-full rounded-xl shadow-lg object-cover hover:scale-105 transition-transform duration-500"
+                                className="absolute h-full w-full rounded-2xl  shadow-lg object-fill object-top hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute -bottom-6 -left-4 bg-white p-4 rounded-lg shadow-md hidden lg:block">
                                 <p className="font-bold  text-[#841B31]">iHUB DivyaSampark</p>
