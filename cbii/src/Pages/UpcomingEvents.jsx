@@ -78,7 +78,7 @@ const UpcomingEvents = () => {
             img={hackathonPic}
             eventName="Shivatech 2025"
             description="Technology is not just about machines—it is about reimagining the future. Shivatech 2025 is a National Level Inter-College Technical Fest, designed to ignite creativity, innovation, and problem-solving among young minds. "
-            buttonName="Register Now"
+            buttonName="Know More"
           />
         </Link>
 

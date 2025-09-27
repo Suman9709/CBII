@@ -190,7 +190,7 @@ const Projects = () => {
                         {project.pi}
                       </span>
                       <span className="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">
-                        Funding {project.budget}
+                        Funding {project.budget} Lac
                       </span>
                     </div>
                     <div className='w-72 bg-[rgb(118,8,37)] rounded-xl text-center mt-2 text-white p-2'>
@@ -216,7 +216,7 @@ const Projects = () => {
               <p className="text-gray-200">Ongoing Projects</p>
             </motion.div>
             <motion.div variants={fadeInUp}>
-              <p className="text-4xl font-bold mb-2">₹{totalBudget}</p>
+              <p className="text-4xl font-bold mb-2">₹{totalBudget}Lac</p>
               <p className="text-gray-200">Total Funding</p>
             </motion.div>
             <motion.div variants={fadeInUp}>

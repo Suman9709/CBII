@@ -22,9 +22,8 @@ import EventsDetails from "./Pages/EventsDetails";
 import UpcomingEvents from "./Pages/UpcomingEvents";
 import Ideathon from "./Components/Ideathon";
 import Hackathon from "./Components/Hackathon";
-import Shivatech from "./Components/Shivatech";
 import Sciencechampionship from "./Components/Sciencechampionship";
-import UpcommingEventsDetails from "./Pages/UpcommingEventsDetails";
+import DepartmentProject from "./Pages/DepartmentEvents";
 
 
 const AppLayout = () => {
@@ -87,7 +86,7 @@ const appRouter = createBrowserRouter([
         path: "/events/upcoming/hackathon",
         element: <Hackathon />, // Renders Hackathon page separately
       },
-      {path:'/event/upcoming/shivatech', element:<Shivatech/>},
+      {path:'/event/upcoming/shivatech', element:<DepartmentProject/>},
       {path:'/event/upcoming/sciencechampioship', element:<Sciencechampionship/>},
       { path: "/events/gallery", element: <EventsPage /> },
       { path: "/events/pastevents/:id", element: <EventsDetails /> },

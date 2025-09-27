@@ -98,7 +98,7 @@ const HeroPage = () => {
             >
                 <div className="bg-[rgb(118,8,37)] text-white py-2 overflow-hidden">
                     <div className="animate-marquee whitespace-nowrap text-center text-sm sm:text-base font-semibold">
-                        📢 Upcoming Ideathon at iHUB Shivalik | <Link to={"/upcomingEventForm"}>Register Now</Link>! 🚀 &nbsp;&nbsp;&nbsp;
+                        📢 Upcoming Ideathon at iHUB Shivalik | <Link to={"/events/upcoming/ideathon"}>Register Now</Link>! 🚀 &nbsp;&nbsp;&nbsp;
                         📢 Internship Opportunities Available – Apply Today! &nbsp;&nbsp;&nbsp;
                         📢 Explore Latest Projects and Startups at iHUB...
                     </div>
