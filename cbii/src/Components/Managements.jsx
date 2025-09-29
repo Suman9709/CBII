@@ -8,7 +8,7 @@ const Managements = () => {
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-700 mb-4">Managements Message</h2>
+                    <h2 className="text-4xl font-bold text-gray-700 mb-4">Management's Message</h2>
                     <div className="w-24 h-1 bg-[rgb(118,8,37)] mx-auto"></div>
                 </div>
 

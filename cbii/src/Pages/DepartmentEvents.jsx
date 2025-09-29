@@ -23,36 +23,36 @@ const DepartmentProject = () => {
                 </Link>
 
 
-                <a
-                    href="https://forms.gle/fkd49F4ps8feSsWY7"
-                    target="_blank"
-                >
+                
                     <UpcommingEventcard
                         img={hackathonPic}
                         eventName="Hackathon"
-                        description="CBII, Shivalik College of Engineering, will be conducting an Internal Hackathon on 29th September 2025 as the first phase of the Smart India Hackathon (SIH) 2025."
+                        description="Hackathon 2025 – A 30-hour innovation marathon by CBII where bright minds collaborate to code, create prototypes, and develop real-world solutions. It’s a battle of creativity, technology, and endurance to transform ideas into impactful innovations."
                         buttonName="Register Now"
+                        fileUrl="/docs/hackathon2025.pdf"
                     />
-                </a>
+              
 
-                <Link to="/event/upcoming/shivatech">
+                
                     <UpcommingEventcard
                         img={codehunt}
                         eventName="Code Hunt"
-                        description="Technology is not just about machines—it is about reimagining the future. Shivatech 2025 is a National Level Inter-College Technical Fest, designed to ignite creativity, innovation, and problem-solving among young minds. "
+                        description="Code Hunt – A fast-paced competitive coding challenge where participants race against time to solve algorithmic puzzles and logical problems. It tests programming skills, problem-solving ability, and speed, rewarding those who can crack codes under pressure."
                         buttonName="Register Now"
+                        fileUrl="/docs/code_hunt.pdf"
                     />
-                </Link>
+                
 
 
-                <Link to="/event/upcoming/sciencechampioship">
+                {/* <Link to="/event/upcoming/sciencechampioship"> */}
                     <UpcommingEventcard
                         img={projectExhibition}
                         eventName="Project Exhibition"
                         description="Science Championship 4.0 is a State-Level Inter-School Scientific Innovation Competition curated by CBII, Shivalik College of Engineering to identify, nurture, and inspire the scientific leaders of tomorrow."
                         buttonName="Register Now"
+                        fileUrl="/docs/project_exihibition.pdf"
                     />
-                </Link>
+                {/* </Link> */}
             </div>
         </div>
     )

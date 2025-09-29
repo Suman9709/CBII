@@ -115,8 +115,8 @@ const Team = () => {
     return (
         <section className=" bg-gray-50">
             {/* Hero Section */}
-            {/* <motion.div
-                className="relative h-screen max-h-[80vh] w-full overflow-hidden"
+            <motion.div
+                className="relative  team-container"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -127,18 +127,8 @@ const Team = () => {
                     alt="About iHUB Shivalik"
                     className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.div
-                        className="text-center px-4 p-6 bg-red-100/40 rounded-xl"
-                        variants={fadeInUp}
-                    >
-                        <h1 className="text-4xl md:text-6xl font-bold text-gray-500 mb-6">About iHUB Shivalik</h1>
-                        <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-                            Fostering innovation and entrepreneurship through cutting-edge incubation programs
-                        </p>
-                    </motion.div>
-                </div>
-            </motion.div> */}
+
+            </motion.div>
 
             {/* Leadership Section */}
             <Leadership />

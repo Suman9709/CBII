@@ -26,32 +26,39 @@ const HeroPage = () => {
     };
 
     return (
-        <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
+        <div className="relative w-full 
+                        h-[40vh]   /* default mobile */
+                        sm:h-[50vh] 
+                        md:h-[60vh] 
+                        lg:h-[70vh] 
+                        xl:h-[80vh] 
+                        2xl:h-[90vh]
+                        overflow-hidden">
 
             {/* Carousel/Slider */}
-           <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[90vh] overflow-hidden">
-    {images.map((image, index) => (
-        <motion.div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: index === currentIndex ? 1 : 0 }}
-            transition={{ duration: 1 }}
-        >
-            <img
-                src={image}
-                alt={`Slide ${index + 1}`}
-                className="w-full h-full object-contain sm:object-cover"
-            />
-        </motion.div>
-    ))}
-</div>
+            <div className="relative w-full h-full overflow-hidden">
+                {images.map((image, index) => (
+                    <motion.div
+                        key={index}
+                        className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: index === currentIndex ? 1 : 0 }}
+                        transition={{ duration: 1 }}
+                    >
+                        <img
+                            src={image}
+                            alt={`Slide ${index + 1}`}
+                            className="w-full h-full object-cover"
+                        />
+                    </motion.div>
+                ))}
+            </div>
 
             <div className="absolute inset-0 z-20"></div>
 
-            
+            {/* Dots */}
             <motion.div
-                className="absolute bottom-12 left-0 right-0 flex justify-center space-x-2 z-30"
+                className="absolute bottom-6 left-0 right-0 flex justify-center space-x-2 z-30"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -78,8 +85,8 @@ const HeroPage = () => {
                 <div className="bg-[rgb(118,8,37)] text-white py-2 overflow-hidden">
                     <div className="animate-marquee whitespace-nowrap text-center text-sm sm:text-base font-semibold">
                         📢 Upcoming Ideathon at iHUB Shivalik | <Link to={"/events/upcoming/ideathon"}>Register Now</Link>! 🚀 &nbsp;&nbsp;&nbsp;
-                        📢 Internship Opportunities Available – Apply Today! &nbsp;&nbsp;&nbsp;
-                        📢 Explore Latest Projects and Startups at iHUB...
+                        📢 Hackathon 2025 – <Link to={"/event/upcoming/shivatech"}>Apply Today!</Link> &nbsp;&nbsp;&nbsp;
+                        📢 Shivatech 2025 | <Link to={"/event/upcoming/shivatech"}>Apply Today!</Link> &nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
             </motion.div>

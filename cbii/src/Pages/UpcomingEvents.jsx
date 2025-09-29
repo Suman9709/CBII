@@ -90,6 +90,7 @@ const UpcomingEvents = () => {
             eventName="Science Championship 4.0 "
             description="Science Championship 4.0 is a State-Level Inter-School Scientific Innovation Competition curated by CBII, Shivalik College of Engineering to identify, nurture, and inspire the scientific leaders of tomorrow."
             buttonName="Register Now"
+            fileUrl="/files/hackathon-brochure.pdf"
           />
         </Link>
       </div>
