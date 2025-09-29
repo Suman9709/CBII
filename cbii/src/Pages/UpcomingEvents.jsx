@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import EventsCard from "../Components/EventsCard";
 
-import hackathonPic from '../Images/EventPoster/hackathon2025.png'
+import hackathonPic from '../Images/EventPoster/hackathon2025.webp'
+import shivatech2025 from '../Images/EventPoster/shivatech2025.webp'
 import sih2025 from '../Images/EventPoster/sih2025.jpg'
 import UpcommingEventcard from "../Components/UpcommingEventCard";
 import msmehackathon50 from '../Images/EventPoster/ideathon5.jpeg'
@@ -75,7 +76,7 @@ const UpcomingEvents = () => {
 
         <Link to="/event/upcoming/shivatech">
           <UpcommingEventcard
-            img={hackathonPic}
+            img={shivatech2025}
             eventName="Shivatech 2025"
             description="Technology is not just about machines—it is about reimagining the future. Shivatech 2025 is a National Level Inter-College Technical Fest, designed to ignite creativity, innovation, and problem-solving among young minds. "
             buttonName="Know More"

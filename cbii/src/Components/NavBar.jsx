@@ -159,7 +159,8 @@ const HoverDropdown = ({ label, children }) => (
             {label}
             <span className="ml-1 text-[rgb(118,8,37)] transform transition-transform group-hover:rotate-180">▼</span>
         </button>
-        <div className="absolute z-10 w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition duration-300 origin-top">
+       <div className="absolute z-10 w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 opacity-0 md:group-hover:opacity-100 md:pointer-events-none md:group-hover:pointer-events-auto transition duration-300 origin-top">
+
             <div className="py-1">{children}</div>
         </div>
     </div>

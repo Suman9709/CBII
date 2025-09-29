@@ -12,6 +12,7 @@ import ankitsir from '../Images/ankitsir.jpg'
 import ashishguptasir from '../Images/ashishguptasir.jpg'
 import khsitijjain from '../Images/kshitijjain.jpg'
 import team from '../Images/team.jpg'
+import amrita from '../Images/amrita.png'
 const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -86,7 +87,7 @@ const Team = () => {
             name: 'Dr. Amrita Singh',
             gender: 'Female',
             designation: 'Mentor and Professional Member',
-            photo: '/images/team/amrita.jpg'
+            photo: amrita
         },
         {
             id: 13,
