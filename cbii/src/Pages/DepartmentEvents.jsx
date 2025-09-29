@@ -49,7 +49,7 @@ const DepartmentProject = () => {
                 <UpcommingEventcard
                     img={projectExhibition}
                     eventName="Project Exhibition"
-                    description="Science Championship 4.0 is a State-Level Inter-School Scientific Innovation Competition curated by CBII, Shivalik College of Engineering to identify, nurture, and inspire the scientific leaders of tomorrow."
+                    description="he Project Exhibition provides a platform for students to showcase their innovative projects, prototypes, and research models across diverse domains of science, engineering, and technology."
                     buttonName="Register Now"
                     fileUrl="/docs/project_exihibition.pdf"
                 />
