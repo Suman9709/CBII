@@ -9,7 +9,15 @@ const MissionVision = () => {
   return (
     <div className="min-h-screen">
       {/* Full-screen hero image */}
-      <div className="relative h-screen max-h-[70vh] w-full overflow-hidden">
+      <div className="relative mission-container max-h-[70vh] w-full
+      
+                        h-[25vh]   /* default mobile */
+                        sm:h-[50vh] 
+                        md:h-[60vh] 
+                        lg:h-[70vh] 
+                        xl:h-[80vh] 
+                        2xl:h-[90vh]
+      overflow-hidden">
         <img
           src={missonImg}
           alt="About iHUB Shivalik"

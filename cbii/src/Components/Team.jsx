@@ -116,7 +116,13 @@ const Team = () => {
         <section className=" bg-gray-50">
             {/* Hero Section */}
             <motion.div
-                className="relative h-[70vh]"  // parent has relative height
+                className="relative 
+                h-[25vh]   /* default mobile */
+                        sm:h-[50vh] 
+                        md:h-[60vh] 
+                        lg:h-[70vh] 
+                        xl:h-[80vh] 
+                        2xl:h-[90vh]"  // parent has relative height
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
