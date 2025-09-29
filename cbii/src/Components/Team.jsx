@@ -116,7 +116,7 @@ const Team = () => {
         <section className=" bg-gray-50">
             {/* Hero Section */}
             <motion.div
-                className="relative  team-container"
+                className="relative h-[70vh]"  // parent has relative height
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
@@ -127,8 +127,8 @@ const Team = () => {
                     alt="About iHUB Shivalik"
                     className="w-full h-full object-cover object-center"
                 />
-
             </motion.div>
+
 
             {/* Leadership Section */}
             <Leadership />

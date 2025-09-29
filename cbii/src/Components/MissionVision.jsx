@@ -3,14 +3,15 @@ import aboutHero from '../Images/aimg13.webp';
 import about from '../Images/about.png'
 import about1 from '../Images/about1.jpg'
 import about2 from '../Images/about2.jpg'
+import missonImg from '../Images/missions.png'
 
 const MissionVision = () => {
   return (
     <div className="min-h-screen">
       {/* Full-screen hero image */}
-      <div className="relative h-screen max-h-[90vh] w-full overflow-hidden">
+      <div className="relative h-screen max-h-[70vh] w-full overflow-hidden">
         <img
-          src={about2}
+          src={missonImg}
           alt="About iHUB Shivalik"
           className="w-full h-full object-fill "
         />

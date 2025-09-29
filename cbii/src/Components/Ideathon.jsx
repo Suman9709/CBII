@@ -54,8 +54,10 @@ const Ideathon = () => {
                     {/* Download Buttons */}
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 mb-2 w-3/4 justify-center items-center">
                         <a
-                            href="/path-to-institute-brochure.pdf"
+                            href="https://shivalikcollege.edu.in/wp-content/uploads/2025/09/school-level-india-edition_compressed.pdf" // starts with / to reference public folder root
                             download
+                            target="_blank"
+
                             className="flex flex-col items-center text-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-1 px-3 rounded-lg shadow-lg w-full"
                         >
                             <span className="text-xs sm:text-sm">Download brochure</span>
@@ -63,8 +65,10 @@ const Ideathon = () => {
                         </a>
 
                         <a
-                            href="/path-to-school-brochure.pdf"
+                            href="https://shivalikcollege.edu.in/wp-content/uploads/2025/09/school-level-india-edition_compressed.pdf"
                             download
+                            target="_blank"
+
                             className="flex flex-col items-center text-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-3 rounded-lg shadow-lg w-full"
                         >
                             <span className="text-xs sm:text-sm">Download brochure</span>

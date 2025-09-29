@@ -6,7 +6,7 @@ import hackathonPic from '../Images/EventPoster/hackathon2025.webp'
 import shivatech2025 from '../Images/EventPoster/shivatech2025.webp'
 import sih2025 from '../Images/EventPoster/sih2025.jpg'
 import UpcommingEventcard from "../Components/UpcommingEventCard";
-import msmehackathon50 from '../Images/EventPoster/ideathon5.jpeg'
+import Sciencechampionship from "../Images/EventPoster/sciencechampionship.png";
 import ideathon from '../Images/EventPoster/ideathon5.png'
 
 const UpcomingEvents = () => {
@@ -63,7 +63,7 @@ const UpcomingEvents = () => {
 
 
         <a
-          href="https://forms.gle/fkd49F4ps8feSsWY7"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfVwblYqBKNBoR5UVePooMNvyEZiZcQZkS77JsRUHqjXdUn_Q/closedform"
           target="_blank"
         >
           <UpcommingEventcard
@@ -86,11 +86,11 @@ const UpcomingEvents = () => {
 
         <Link to="/event/upcoming/sciencechampioship">
           <UpcommingEventcard
-            img={hackathonPic}
+            img={Sciencechampionship}
             eventName="Science Championship 4.0 "
             description="Science Championship 4.0 is a State-Level Inter-School Scientific Innovation Competition curated by CBII, Shivalik College of Engineering to identify, nurture, and inspire the scientific leaders of tomorrow."
             buttonName="Register Now"
-            fileUrl="/files/hackathon-brochure.pdf"
+            // fileUrl="/files/hackathon-brochure.pdf"
           />
         </Link>
       </div>
