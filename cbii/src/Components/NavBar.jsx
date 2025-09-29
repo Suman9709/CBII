@@ -66,13 +66,14 @@ const NavBar = () => {
         <nav className="bg-white shadow-sm w-full fixed top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-20 items-center">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center space-x-2 flex-shrink-0">
                         <img className="h-14 object-contain" src={cbiiLogo} alt="CBII Logo" />
-                        <div className='flex items-center'>
+                        <div className='flex items-center space-x-2'>
                             <img className="h-10 object-contain" src={shivaliklogo} alt="Shivalik Logo" />
-                            <img className="h-6 object-contain ml-2" src={nacc} alt="NACC Grade" />
+                            <img className="h-6 object-contain" src={nacc} alt="NACC Grade" />
                         </div>
                     </div>
+
 
                     <div className="hidden md:flex items-center space-x-2 lg:space-x-6">
                         {menuItems.map((item) => (
@@ -83,7 +84,7 @@ const NavBar = () => {
                                     ))}
                                 </ClickDropdown>
                             ) : (
-                                <Link key={item.label} to={item.href} className="relative text-gray-700 hover:text-[rgb(118,8,37)] px-3 py-2 text-base font-medium transition-colors duration-300 group">
+                                <Link key={item.label} to={item.href} className="relative  text-[rgb(118,8,37)] hover:text-[rgb(118,8,37)] px-3 py-2 text-base font-medium transition-colors duration-300 group">
                                     {item.label}
                                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[rgb(118,8,37)] transition-all duration-300 group-hover:w-full"></span>
                                 </Link>
@@ -123,7 +124,7 @@ const NavBar = () => {
                                             onClick={() => toggleMobileDropdown(item.label)}
                                         >
                                             <span>{item.label}</span>
-                                            {openMobileDropdown === item.label ? <ChevronUp className="h-5 w-5" /> : <ChevronDown className="h-5 w-5" />}
+                                            {openMobileDropdown === item.label ? <ChevronUp className="h-5 w-5 text-[rgb(118,8,37)] fill-[rgb(118,8,37)]" /> : <ChevronDown className="h-5 w-5 text-[rgb(118,8,37)] fill-[rgb(118,8,37)]" />}
                                         </button>
                                         {openMobileDropdown === item.label && (
                                             <div className="pl-8 pr-4 space-y-2 pb-3">
@@ -183,13 +184,16 @@ const ClickDropdown = ({ label, children }) => {
         <div className="relative" ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-[rgb(118,8,37)] py-2 text-base font-medium flex items-center transition-colors duration-300 cursor-pointer"
+                className="text-[rgb(118,8,37)] py-2 text-base font-medium flex items-center transition-colors duration-300 cursor-pointer hover:text-red-900"
             >
                 {label}
-                {isOpen ? <ChevronUp className="ml-1 h-4 w-4" /> : <ChevronDown className="ml-1 h-4 w-4" />}
+                {isOpen ?
+                    <ChevronUp className="ml-1 h-4 w-4 text-[rgb(118,8,37)] fill-[rgb(118,8,37)]" /> :
+                    <ChevronDown className="ml-1 h-4 w-4 text-[rgb(118,8,37)] fill-[rgb(118,8,37)]" />
+                }
             </button>
             <div
-                className={`absolute z-10 w-56 mt-2 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-300 origin-top ${isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}
+                className={` bg-black text-white absolute z-10 w-56 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 transition-all duration-300 origin-top ${isOpen ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}
             >
                 <div className="py-1">{React.Children.map(children, child => React.cloneElement(child, { closeDropdown: () => setIsOpen(false) }))}</div>
             </div>
@@ -201,11 +205,12 @@ const DropdownItem = ({ href, title, closeDropdown }) => (
     <Link
         to={href}
         onClick={closeDropdown}
-        className="block px-4 py-2 text-sm text-gray-700 hover:text-[rgb(118,8,37)] hover:bg-gray-100 transition-colors duration-300"
+        className="block px-4 py-2 text-sm text-white   hover:text-[rgb(118,8,37)] hover:bg-gray-800 transition-colors duration-300"
     >
         {title}
     </Link>
 );
+
 
 export default NavBar;
 

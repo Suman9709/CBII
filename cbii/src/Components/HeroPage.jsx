@@ -29,48 +29,27 @@ const HeroPage = () => {
         <div className="relative w-full h-[60vh] md:h-[90vh] overflow-hidden">
 
             {/* Carousel/Slider */}
-            <div className="relative w-full h-full">
-                {images.map((image, index) => (
-                    <motion.div
-                        key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: index === currentIndex ? 1 : 0 }}
-                        transition={{ duration: 1 }}
-                    >
-                        <img
-                            src={image}
-                            alt={`Slide ${index + 1}`}
-                            className="w-full h-full object-cover object-center"
-                        />
-                    </motion.div>
-                ))}
-            </div>
+           <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[90vh] overflow-hidden">
+    {images.map((image, index) => (
+        <motion.div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentIndex ? 1 : 0 }}
+            transition={{ duration: 1 }}
+        >
+            <img
+                src={image}
+                alt={`Slide ${index + 1}`}
+                className="w-full h-full object-contain sm:object-cover"
+            />
+        </motion.div>
+    ))}
+</div>
+
             <div className="absolute inset-0 z-20"></div>
 
-            {/* Hero Text Content */}
-            {/* <motion.div
-                className="absolute inset-0 z-30 flex items-center justify-center px-4"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeInUp}
-            >
-                <div className="w-full max-w-4xl mx-auto p-4 bg-red-100/40 rounded-xl mt-28 font-sans">
-                    <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white text-center"
-
-                    >
-                        iHUB Shivalik / CBII
-                    </h1>
-                    <p className="text-base sm:text-lg md:text-2xl lg:text-3xl mb-6 text-gray-100 font-semibold leading-relaxed text-center"
-
-                    >
-                        Empowering Innovation Through Resources, Mentorship, and Strategic Networking
-                    </p>
-                </div>
-            </motion.div> */}
-
-            {/* Navigation Dots */}
+            
             <motion.div
                 className="absolute bottom-12 left-0 right-0 flex justify-center space-x-2 z-30"
                 initial="hidden"
