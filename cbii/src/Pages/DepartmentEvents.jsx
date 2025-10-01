@@ -7,7 +7,9 @@ import ideathon from '../Images/EventPoster/ideathon5.png'
 import codehunt from '../Images/EventPoster/codehunt.png'
 import projectExhibition from '../Images/EventPoster/projectexhibition.png'
 import shivatech from '../Images/EventPoster/shivatech2025.webp'
-
+import formutech from '../Images/EventPoster/formutech.jpg'
+import herboinnovate from '../Images/EventPoster/herboinnovate.jpg'
+import smarthealthmodel from '../Images/EventPoster/smarthealthmodel.jpg'
 
 const DepartmentProject = () => {
     return (
@@ -221,14 +223,14 @@ const DepartmentProject = () => {
                 <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-4">
 
                     <UpcommingEventcard
-                        img={shivatech}
+                        img={herboinnovate}
                         eventName="HerboInnovate"
                         description="Exhibition of self-prepared formulations inspired by Ayurveda and natural products including nutraceuticals, herbal extracts, cosmeceuticals, and wellness products with scientific justification and modern relevance."
                         buttonName="Register Now"
                         fileUrl="/docs/pharma.pdf"
                     />
                     <UpcommingEventcard
-                        img={shivatech}
+                        img={formutech}
                         eventName="FormuTech"
                         description="Presentation of self-prepared allopathic pharmaceutical dosage forms such as tablets, capsules, suspensions, ointments, and novel drug delivery prototypes highlighting the art and science of formulation."
                         buttonName="Register Now"
@@ -236,7 +238,7 @@ const DepartmentProject = () => {
                     />
 
                     <UpcommingEventcard
-                        img={shivatech}
+                        img={smarthealthmodel}
                         eventName="Smart Health Models"
                         description="Demonstration of innovative working models showcasing the application of pharmacy and healthcare practices in improving patient care, drug delivery, and diagnostics."
                         buttonName="Register Now"
