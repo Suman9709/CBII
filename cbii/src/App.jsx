@@ -24,6 +24,7 @@ import Ideathon from "./Components/Ideathon";
 import Hackathon from "./Components/Hackathon";
 import Sciencechampionship from "./Components/Sciencechampionship";
 import DepartmentProject from "./Pages/DepartmentEvents";
+import Incubation from "./Pages/Incubation";
 
 
 const AppLayout = () => {
@@ -90,6 +91,7 @@ const appRouter = createBrowserRouter([
       {path:'/event/upcoming/sciencechampioship', element:<Sciencechampionship/>},
       { path: "/events/gallery", element: <EventsPage /> },
       { path: "/events/pastevents/:id", element: <EventsDetails /> },
+      {path:"/incubation", element:<Incubation/>}
       // { path: "/events/upcommingevents/:id", element: <UpcommingEventsDetails /> },
       // { path: "/upcomingEventForm", element: <UpcommngEventsForm /> },
     ]

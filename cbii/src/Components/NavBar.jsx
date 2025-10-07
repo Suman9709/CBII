@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { href, Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, ChevronUp } from 'lucide-react';
 import shivaliklogo from '../Images/Logo/shivalik-logo.png';
 import nacc from '../Images/Logo/nacc-grade.png';
@@ -18,6 +18,11 @@ const NavBar = () => {
         {
             label: "Home",
             href: "/",
+            subItems: []
+        },
+         {
+            label: "Incubation",
+            href: "/incubation",
             subItems: []
         },
         {
@@ -60,6 +65,7 @@ const NavBar = () => {
             href: "/#footer",
             subItems: []
         }
+        
     ];
 
     return (
@@ -90,14 +96,14 @@ const NavBar = () => {
                                 </Link>
                             )
                         ))}
-                        <Link
+                        {/* <Link
                             to="#"
                             onClick={(e) => e.preventDefault()}
                             className="pointer-events-none">
                             <button className="inline-block px-4 py-2 lg:px-6 lg:py-3 bg-[rgb(118,8,37)] text-white font-semibold rounded-lg hover:bg-[rgb(118,8,37)] transition duration-300 cursor-pointer opacity-50">
                                 Register Now
                             </button>
-                        </Link>
+                        </Link> */}
                     </div>
 
                     <div className="md:hidden flex items-center">
@@ -152,11 +158,11 @@ const NavBar = () => {
                                 )}
                             </div>
                         ))}
-                        <div className="px-6 pt-4">
+                        {/* <div className="px-6 pt-4">
                             <Link to="/apply" className="block w-full py-3 text-base font-medium text-white bg-[rgb(118,8,37)] hover:bg-[rgb(118,8,37)] transition-colors duration-300 text-center rounded-lg">
                                 Register Now
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )}

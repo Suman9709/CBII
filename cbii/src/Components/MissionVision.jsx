@@ -3,7 +3,8 @@ import aboutHero from '../Images/aimg13.webp';
 import about from '../Images/about.png'
 import about1 from '../Images/about1.jpg'
 import about2 from '../Images/about2.jpg'
-import missonImg from '../Images/missions.png'
+import missonImg from '../Images/missionss.png'
+// import missions from '..'
 
 const MissionVision = () => {
   return (

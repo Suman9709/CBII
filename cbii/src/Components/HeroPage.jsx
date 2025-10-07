@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import iimg6 from '../Images/aimg6.webp';
 import iimg3 from '../Images/aimg3.webp';
 import iimg1 from '../Images/aimg1.webp';
+import iimg4 from '../Images/aimg4.webp';
+import iimg5 from '../Images/aimg5.webp';
 import { Link } from 'react-router-dom';
 
 const HeroPage = () => {
-    const images = [iimg6, iimg3, iimg1, iimg1, iimg1, iimg1, iimg1, iimg1];
+    const images = [iimg6, iimg3, iimg1, iimg4, iimg5];
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
@@ -31,12 +33,12 @@ const HeroPage = () => {
                         sm:h-[50vh] 
                         md:h-[60vh] 
                         lg:h-[70vh] 
-                        xl:h-[80vh] 
-                        2xl:h-[90vh]
-                        overflow-hidden">
+                        xl:h-[90vh] /*laptop view*/
+                        2xl:h-[95vh]
+                        ">
 
             {/* Carousel/Slider */}
-            <div className="relative w-full h-full overflow-hidden">
+            <div className="relative w-full h-full">
                 {images.map((image, index) => (
                     <motion.div
                         key={index}
